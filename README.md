@@ -1,32 +1,41 @@
-# web-spicy — Site de Spicy (spicy-fr)
+# Site Spicy
 
-Site statique reprenant le contenu de [spicy-fr.com](https://spicy-fr.com) et la direction artistique « cadre doré / dégradé violet / étincelles ».
+Site statique officiel de **Spicy**, streameuse multigaming, conçu pour être
+simple à maintenir dans le temps grâce à une séparation stricte entre
+**données**, **rendu** et **style**. Déployé via GitHub Pages (branche `main`).
 
 ## Architecture
 
-- **Séparation données / rendu** : tout le contenu éditable est dans `js/data.js` (`SITE_DATA`). Le rendu (`index.html`, `css/style.css`, `js/main.js`) n'a pas besoin d'être touché pour mettre à jour le contenu.
-- **100 % statique** : aucun build, aucune dépendance.
-
-## Mise à jour du contenu
-
-Modifier uniquement `js/data.js` :
-- `site.tagline` : phrase d'accroche de l'accueil ;
-- `about` : texte et infos de la section « Qui je suis » ;
-- `socials` : liens réseaux ;
-- `games` : cartes de la section « Mes univers » ;
-- `navigation` : menus.
-
-## Déploiement GitHub Pages
-
-1. Aller dans **Settings → Pages** du dépôt.
-2. Source : **Deploy from a branch**, branche `main`, dossier `/ (root)`.
-3. Le site est disponible sur `https://vignemail1.github.io/web-spicy/`.
-
-## Structure
-
 ```
-index.html        # Structure (one-page, sections ancrées)
-css/style.css     # Direction artistique
-js/data.js        # DONNÉES — à éditer
-js/main.js        # RENDU — injection des données dans le DOM
+index.html         Structure HTML minimale (conteneurs vides ciblés par JS)
+css/style.css       Direction artistique (violet/or, fond étoilé, cadres diamant)
+js/data.js          Toutes les données du site (profil, réseaux, planning, jeux, sponsors, contact)
+js/main.js          Moteur de rendu : lit data.js et génère le HTML dynamiquement
+assets/             Images (avatar, logo, favicon, jeux, sponsors)
 ```
+
+### Principe de maintenabilité
+
+- **Pour changer un contenu** (texte, planning, liste de jeux, sponsors, liens
+  sociaux, email de contact...) : modifier uniquement `js/data.js`.
+- **Pour changer l'apparence** (couleurs, polices, mise en page) : modifier
+  uniquement `css/style.css`.
+- **Pour changer la structure des sections** ou ajouter un nouveau bloc :
+  modifier `index.html` (conteneur) et `js/main.js` (fonction de rendu
+  correspondante).
+
+Aucune donnée n'est codée en dur dans `main.js` ou `index.html` : le site
+peut être entièrement mis à jour par une personne non développeuse en
+éditant `data.js`.
+
+## Origine
+
+- Contenu et structure inspirés du site [spicy-fr.com](https://spicy-fr.com)
+  ([source](https://github.com/cyriltouchard/site-spicy-fr)).
+- Direction artistique (violet/or, cadre diamant étoilé) reprise de la
+  charte graphique fournie.
+
+## Déploiement
+
+Le site est publié via **GitHub Pages**, configuré en *Deploy from branch*
+sur `main` (aucun build nécessaire, HTML/CSS/JS pur).
