@@ -1,40 +1,53 @@
-/* ==========================================================================
-   Données du site — SEUL FICHIER À MODIFIER POUR METTRE À JOUR LE CONTENU
-   ========================================================================== */
+/**
+ * data.js
+ * ---------------------------------------------------------------
+ * Toutes les donnees du site sont centralisees ici, separees du
+ * rendu (main.js) et de la presentation (css/style.css).
+ * Pour mettre a jour le contenu, modifier uniquement cet objet.
+ * ---------------------------------------------------------------
+ */
 
-const SITE_DATA = {
-  site: {
-    name: 'Spicy',
-    tagline: 'Spicy, passionnée de jeux vidéo, explore de nouveaux mondes, vit et partage de grandes histoires avec sa communauté.',
+const SPICY_DATA = {
+  profile: {
+    pseudo: "Spicy",
+    prenom: "Aurelia",
+    contenu: "Multigaming",
+    anniversaire: "27 Juillet",
+    accroche: "Spicy, passionnee de jeux video, explore de nouveaux mondes, vie et partage de grandes histoires avec ma communaute.",
+    avatar: "images/avatar.jpg",
+    logo: "images/logo.svg"
   },
 
-  about: {
-    text: "Spicy, passionnée de jeux vidéo, explore de nouveaux mondes, vit et partage de grandes histoires avec sa communauté.",
-    infos: [
-      { label: 'Prénom', value: 'Aurélia' },
-      { label: 'Contenu', value: 'Multigaming' },
-      { label: 'Anniversaire', value: '27 Juillet' },
-    ],
-  },
-
-  socials: [
-    { name: 'Twitch', url: 'https://www.twitch.tv/spicy_fr' },
-    { name: 'YouTube', url: '#' },
-    { name: 'TikTok', url: '#' },
-    { name: 'Instagram', url: '#' },
+  reseaux: [
+    { nom: "Twitch", url: "https://www.twitch.tv/spicy", icone: "twitch" },
+    { nom: "TikTok", url: "https://www.tiktok.com/@spicy", icone: "tiktok" },
+    { nom: "Instagram", url: "https://www.instagram.com/spicy", icone: "instagram" },
+    { nom: "Discord", url: "https://discord.gg/spicy", icone: "discord" },
+    { nom: "YouTube", url: "https://www.youtube.com/@spicy", icone: "youtube" },
+    { nom: "X", url: "https://x.com/spicy", icone: "x" }
   ],
 
-  games: [
-    { title: 'Aventure & RPG', description: "Des mondes vastes, des histoires épiques et des héros inoubliables." },
-    { title: 'FPS', description: "Réflexes, stratégie et compétition à l'état pur." },
-    { title: 'Survie & Craft', description: "Construire, explorer et survivre ensemble." },
-    { title: 'Co-op & Party Games', description: "Des moments de rigolade partagés avec la communauté." },
+  jeux: [
+    { nom: "Valorant", image: "images/games/valorant.jpg", description: "FPS tactique competitif" },
+    { nom: "League of Legends", image: "images/games/lol.jpg", description: "MOBA strategique" },
+    { nom: "Minecraft", image: "images/games/minecraft.jpg", description: "Creativite et survie" },
+    { nom: "Just Chatting", image: "images/games/chatting.jpg", description: "Moments avec la communaute" }
   ],
 
-  navigation: [
-    { label: 'Accueil', href: '#accueil' },
-    { label: 'Qui je suis', href: '#about' },
-    { label: 'Jeux', href: '#jeux' },
-    { label: 'Contact', href: '#contact' },
+  planning: [
+    { jour: "Lundi", horaire: "20h - 23h" },
+    { jour: "Mercredi", horaire: "20h - 23h" },
+    { jour: "Vendredi", horaire: "21h - 00h" },
+    { jour: "Dimanche", horaire: "18h - 21h" }
   ],
+
+  sponsors: [
+    { nom: "HyperX", logo: "images/hyperxlogo.svg", url: "https://www.hyperxgaming.com" },
+    { nom: "NoLag VPN", logo: "images/nolagvpn-logo.webp", url: "#" }
+  ],
+
+  contact: {
+    email: "contact@spicy-fr.com",
+    message: "Pour toute demande de partenariat, de sponsoring ou simplement pour dire bonjour, n'hesite pas a me contacter !"
+  }
 };
