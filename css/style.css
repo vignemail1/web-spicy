@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Spicy — Feuille de style
+   DA : fond noir profond, dégradé violet, cadre doré, étincelles
+   ========================================================================== */
+
+:root {
+  --bg: #0a0a0f;
+  --violet-dark: #2a1a4a;
+  --violet-mid: #6a3fd0;
+  --violet-light: #a98fe0;
+  --pink-light: #e8c7e0;
+  --gold: #e8c87a;
+  --gold-soft: #f0dcae;
+  --white: #f5f2fa;
+  --font-title: 'Cinzel Decorative', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Étincelles de fond */
+.stars {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 10% 20%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 80% 10%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 70% 60%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 30% 80%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 90% 85%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 50% 40%, #fff 50%, transparent 51%);
+  opacity: .5;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+@keyframes twinkle { from { opacity: .25; } to { opacity: .6; } }
+
+/* Cadre doré style image */
+.frame {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 4rem auto;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(160deg, var(--violet-dark) 0%, var(--violet-mid) 55%, var(--pink-light) 110%);
+  clip-path: polygon(
+    8% 0, 50% 0, 58% 4%, 92% 4%, 100% 14%, 100% 88%, 92% 100%,
+    58% 96%, 50% 100%, 42% 96%, 8% 100%, 0 88%, 0 14%, 8% 0
+  );
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 40px rgba(232, 200, 122, .25);
+}
+.frame::before {
+  content: '';
+  position: absolute; inset: 6px;
+  border: 1px solid var(--gold-soft);
+  clip-path: inherit;
+  pointer-events: none;
+}
+.frame-wide { max-width: 960px; }
+
+.title-deco {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.spark { color: var(--gold); font-size: .5em; vertical-align: super; }
+
+.tagline { font-size: 1.1rem; font-weight: 300; max-width: 46ch; margin: 0 auto 1.5rem; }
+
+/* Liste "Qui je suis" */
+.about-text { font-weight: 300; max-width: 50ch; margin: 0 auto 2rem; }
+.about-list {
+  list-style: none;
+  text-align: left;
+  max-width: 420px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+.about-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .5rem 0;
+  border-bottom: 1px dashed rgba(232, 200, 122, .35);
+}
+.about-list li::before { content: '✦'; color: var(--gold-soft); margin-right: .5rem; }
+.about-list .label { font-weight: 600; }
+.about-list .value { color: var(--gold); font-weight: 600; }
+
+/* Jeux */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+.game-card {
+  background: rgba(0, 0, 0, .3);
+  border: 1px solid var(--gold);
+  padding: 1.25rem;
+  border-radius: 4px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(106, 63, 208, .4);
+}
+.game-card h3 { font-family: var(--font-title); font-size: 1.1rem; color: var(--gold-soft); margin-bottom: .5rem; }
+.game-card p { font-size: .9rem; font-weight: 300; }
+
+/* Réseaux */
+.socials { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.socials a {
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  padding: .5rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background .25s ease, color .25s ease;
+}
+.socials a:hover { background: var(--gold); color: var(--violet-dark); }
+
+/* Nav */
+.site-header { position: sticky; top: 0; z-index: 10; background: rgba(10, 10, 15, .85); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(232,200,122,.2); }
+.nav { display: flex; justify-content: center; gap: 2rem; padding: 1rem; flex-wrap: wrap; }
+.nav a { color: var(--white); text-decoration: none; font-weight: 400; letter-spacing: .05em; }
+.nav a:hover { color: var(--gold); }
+
+/* Hero plein écran */
+.hero { min-height: calc(100vh - 60px); display: flex; align-items: center; padding: 2rem 1rem; }
+
+.site-footer { text-align: center; padding: 2rem; font-weight: 300; font-size: .85rem; color: var(--violet-light); position: relative; z-index: 1; }
+
+/* Apparition au scroll */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (max-width: 600px) {
+  .frame { padding: 2rem 1.25rem; }
+}
