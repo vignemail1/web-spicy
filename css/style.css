@@ -78,6 +78,23 @@ h1, h2, h3 { line-height: 1.2; }
 }
 .main-nav a:hover { color: var(--pink); }
 
+.texte-degrade {
+  display: inline-block; /* évite que le dégradé s'étende sur toute la ligne */
+
+  background-image: linear-gradient(
+    to right,
+    var(--purple-light) 0%,
+    var(--pink) 50%,
+    var(--gold) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text; /* compatibilité WebKit / Safari */
+
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Safari */
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

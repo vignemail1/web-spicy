@@ -44,14 +44,13 @@ const SITE_DATA = {
     subtitle: "Profite de réductions exclusives avec mes codes !",
     list: [
       { name: "NoLagVPN", logo: "assets/images/sponsors/nolagvpn-logo-v3.webp", url: "https://nolagvpn.com/join/SPICYFR", code: "SPICYFR" },
-      { name: "MonPokestore", logo: "assets/images/sponsors/Logo-300x100.avif", url: "https://www.monpokestore.fr/", code: "SPICY" },
       { name: "West Gaming", logo: "assets/images/logo.svg", url: "https://westgaming.fr/?opaffi=7d964d2b4f", code: "SPICY" },
       { name: "GUNNAR", logo: null, url: "https://www.gunnar.fr/", code: "Spicy" },
       { name: "Maté In", logo: "assets/images/sponsors/logo-matein-transparent.avif", url: "https://mate-in.com/", code: "Spicy" }
     ]
   },
 
-  contactEmail: "contact@spicy-fr.com",
+  contactEmail: "contact.spicyfr@gmail.com",
 
   socials: [
     { name: "Twitch", url: "https://twitch.tv/spicy_fr" },
