@@ -32,7 +32,7 @@ const SITE_DATA = {
 
   setup: {
     subtitle: "Le setup d'une vraie snipeuse 🎮",
-    image: "assets/images/games/new-setup.jpg",
+    image: "https://spicy-assets.vignemail1.eu/spicy-setup.png",
     features: [
       { title: "Écran", text: "Gaming monitor haute performance" },
       { title: "Performance", text: "Setup optimisé pour le stream" },
