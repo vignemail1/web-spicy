@@ -1,121 +1,96 @@
-/**
- * main.js — Moteur de rendu du site Spicy.
- * Ce fichier lit uniquement SPICY_DATA (js/data.js) pour générer le HTML.
- * Aucune donnée ne doit être codée en dur ici : toute modification de
- * contenu se fait dans data.js, toute modification de mise en forme
- * se fait dans css/style.css.
- */
+// ============================================
+// MOTEUR DE RENDU - ne contient aucune donnee en dur
+// Toutes les donnees viennent de js/data.js (SITE_DATA)
+// ============================================
 
-const ICONS = {
-  twitch: "🟣",
-  tiktok: "🎵",
-  instagram: "📸",
-  discord: "💬",
-  youtube: "▶️"
-};
-
-function el(tag, className, html) {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (html !== undefined) node.innerHTML = html;
-  return node;
+function renderNav() {
+  const nav = document.getElementById("main-nav");
+  nav.innerHTML = SITE_DATA.nav.map(item =>
+    `<a href="${item.href}">${item.label}</a>`
+  ).join("");
 }
 
-function renderHero(data) {
-  const hero = document.getElementById("hero");
-  hero.innerHTML = `
-    <img src="${data.profil.logo}" alt="Logo ${data.profil.pseudo}" class="hero-logo" />
-    <h1 class="hero-title">${data.profil.pseudo}</h1>
-    <p class="hero-tagline">${data.profil.contenu} · Streameuse passionnée</p>
-  `;
+function renderLiveLinks() {
+  document.getElementById("live-link").href = SITE_DATA.twitchUrl;
+  document.getElementById("hero-live-btn").href = SITE_DATA.twitchUrl;
 }
 
-function renderQuiJeSuis(data) {
-  const container = document.getElementById("qui-je-suis");
-  const card = el("div", "diamond-card");
-  card.innerHTML = `
-    <div class="diamond-card-inner">
-      <h2 class="diamond-title">Qui je suis</h2>
-      <p class="diamond-text">${data.profil.accroche}</p>
-      <ul class="diamond-list">
-        <li><span>Prénom :</span><strong>${data.profil.prenom}</strong></li>
-        <li><span>Contenu :</span><strong>${data.profil.contenu}</strong></li>
-        <li><span>Anniversaire :</span><strong>${data.profil.anniversaire}</strong></li>
-      </ul>
+function renderHero() {
+  document.getElementById("hero-tagline").textContent = SITE_DATA.hero.tagline;
+  document.getElementById("hero-desc").textContent = SITE_DATA.hero.description;
+  document.getElementById("avatar-img").src = SITE_DATA.hero.avatar;
+}
+
+function renderStats() {
+  const bar = document.getElementById("stats-bar");
+  bar.innerHTML = SITE_DATA.stats.map(s => `
+    <div class="stat">
+      <div class="stat-value">${s.value}</div>
+      <div class="stat-label">${s.label}</div>
     </div>
-  `;
-  container.appendChild(card);
+  `).join("");
 }
 
-function renderReseaux(data) {
-  const container = document.getElementById("reseaux");
-  data.reseaux.forEach((r) => {
-    const a = el("a", "social-badge");
-    a.href = r.url;
-    a.target = "_blank";
-    a.rel = "noopener noreferrer";
-    a.innerHTML = `<span class="social-icon">${ICONS[r.icone] || "🔗"}</span><span>${r.nom}</span>`;
-    container.appendChild(a);
+function renderAbout() {
+  document.getElementById("about-text").textContent = SITE_DATA.about.text;
+  const tags = document.getElementById("about-tags");
+  tags.innerHTML = SITE_DATA.about.tags.map(t => `<span class="tag">${t}</span>`).join("");
+}
+
+function renderSetup() {
+  document.getElementById("setup-subtitle").textContent = SITE_DATA.setup.subtitle;
+  document.getElementById("setup-img").src = SITE_DATA.setup.image;
+  document.getElementById("setup-img").alt = "Setup Gaming Spicy_FR";
+  const features = document.getElementById("setup-features");
+  features.innerHTML = SITE_DATA.setup.features.map(f => `
+    <div class="feature-card">
+      <h3>${f.title}</h3>
+      <p>${f.text}</p>
+    </div>
+  `).join("");
+}
+
+function copyCode(code, btn) {
+  navigator.clipboard.writeText(code).then(() => {
+    const original = btn.textContent;
+    btn.textContent = "Copié !";
+    setTimeout(() => { btn.textContent = original; }, 1500);
   });
 }
+window.copyCode = copyCode;
 
-function renderPlanning(data) {
-  const container = document.getElementById("planning");
-  const table = el("div", "planning-grid");
-  data.planning.forEach((p) => {
-    const row = el("div", "planning-row");
-    row.innerHTML = `<span class="planning-jour">${p.jour}</span><span class="planning-horaire">${p.horaire}</span>`;
-    table.appendChild(row);
-  });
-  container.appendChild(table);
+function renderPartners() {
+  document.getElementById("partners-subtitle").textContent = SITE_DATA.partners.subtitle;
+  document.getElementById("partners-contact-btn").href = `mailto:${SITE_DATA.contactEmail}`;
+
+  const grid = document.getElementById("partners-grid");
+  grid.innerHTML = SITE_DATA.partners.list.map(p => `
+    <div class="partner-card">
+      <a href="${p.url}" target="_blank" rel="noopener" class="partner-logo-link">
+        ${p.logo
+          ? `<img src="${p.logo}" alt="${p.name}" class="partner-logo">`
+          : `<span class="partner-name-text">${p.name}</span>`}
+      </a>
+      <button class="btn-code" onclick="copyCode('${p.code}', this)">${p.code}<span class="copy-hint">Copier</span></button>
+    </div>
+  `).join("");
 }
 
-function renderJeux(data) {
-  const container = document.getElementById("jeux");
-  data.jeux.forEach((jeu) => {
-    const card = el("div", "game-card");
-    card.innerHTML = `
-      <img src="${jeu.image}" alt="${jeu.nom}" loading="lazy" />
-      <div class="game-card-label">${jeu.nom}</div>
-    `;
-    container.appendChild(card);
-  });
-}
-
-function renderSponsors(data) {
-  const container = document.getElementById("sponsors");
-  data.sponsors.forEach((s) => {
-    const a = el("a", "sponsor-badge");
-    a.href = s.url;
-    a.target = "_blank";
-    a.rel = "noopener noreferrer";
-    a.innerHTML = `<img src="${s.logo}" alt="${s.nom}" loading="lazy" />`;
-    container.appendChild(a);
-  });
-}
-
-function renderContact(data) {
-  const container = document.getElementById("contact");
-  container.innerHTML = `
-    <p class="contact-text">${data.contact.message}</p>
-    <a class="contact-button" href="mailto:${data.contact.email}">✉️ ${data.contact.email}</a>
-  `;
-}
-
-function renderFooter(data) {
-  const footer = document.getElementById("footer-year");
-  footer.textContent = new Date().getFullYear();
+function renderFooter() {
+  document.getElementById("footer-socials").innerHTML = SITE_DATA.socials.map(s =>
+    `<a href="${s.url}" target="_blank" rel="noopener">${s.name}</a>`
+  ).join("");
 }
 
 function init() {
-  renderHero(SPICY_DATA);
-  renderQuiJeSuis(SPICY_DATA);
-  renderReseaux(SPICY_DATA);
-  renderPlanning(SPICY_DATA);
-  renderJeux(SPICY_DATA);
-  renderSponsors(SPICY_DATA);
-  renderContact(SPICY_DATA);
-  renderFooter(SPICY_DATA);
+  renderNav();
+  renderLiveLinks();
+  renderHero();
+  renderStats();
+  renderAbout();
+  renderSetup();
+  renderPartners();
+  renderFooter();
 }
 
 document.addEventListener("DOMContentLoaded", init);
