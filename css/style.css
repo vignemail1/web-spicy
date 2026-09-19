@@ -1,7 +1,7 @@
 /* ============================================
    VARIABLES & RESET
 ============================================ */
-:root {
+/*:root {
   --bg: #0c0614;
   --bg-alt: #150c22;
   --purple: #8b2fd6;
@@ -13,7 +13,27 @@
   --card-bg: rgba(255,255,255,0.04);
   --border: rgba(255,255,255,0.08);
   --radius: 16px;
+}*/
+
+:root {
+  --bg: #0c0614;
+  --bg-alt: #150c22;
+  --purple: #583C9E;
+  --purple-light: #825DD0;
+  --pink: #9F7BD0;
+  --gold: #F8D59F;
+  --text: #f2eefa;
+  --text-muted: #b6a8cc;
+  --card-bg: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --radius: 16px;
 }
+/*
+nuit : #241C28
+bleu: #583C9E
+creme : #ECCCA5
+gold : #F8D59F
+*/
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
