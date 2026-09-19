@@ -31,18 +31,26 @@ function renderGames() {
   const recentGames = document.getElementById("recent-games");
   const olderGames = document.getElementById("older-games");
   const gamesMore = document.getElementById("games-more");
+  const recent_threshold = 25;
+  const forever_threashold = 1020;
 
-  const eligibleGames = SITE_DATA.games.filter(
-    game => Number(game.playtime_forever) >= 1000
-  );
+  const recent = SITE_DATA.games
+    .filter(game => Number(game.playtime_2weeks) >= recent_threshold)
+    .sort(
+      (a, b) =>
+        Number(b.playtime_forever) - Number(a.playtime_forever)
+    );
 
-  const recent = eligibleGames.filter(
-    game => Number(game.playtime_2weeks) > 0
-  );
-
-  const older = eligibleGames.filter(
-    game => Number(game.playtime_2weeks) === 0
-  );
+  const older = SITE_DATA.games
+    .filter(
+      game =>
+        Number(game.playtime_2weeks) < recent_threshold &&
+        Number(game.playtime_forever) >= forever_threashold
+    )
+    .sort(
+      (a, b) =>
+        Number(b.playtime_forever) - Number(a.playtime_forever)
+    );
 
   const createCard = game => {
     const achievements =
@@ -81,7 +89,8 @@ function renderGames() {
   recentGames.innerHTML = recent.map(createCard).join("");
   olderGames.innerHTML = older.map(createCard).join("");
 
-  const otherGamesCount = SITE_DATA.games.length - eligibleGames.length;
+  const otherGamesCount =
+    SITE_DATA.games.length - recent.length - older.length;
 
   gamesMore.textContent =
     otherGamesCount > 0
