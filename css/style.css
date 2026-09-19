@@ -439,3 +439,69 @@ h1, h2, h3 { line-height: 1.2; }
   .hero-avatar img { width: 200px; height: 200px; }
   .stats-bar { gap: 32px; }
 }
+
+.games-group {
+  margin-top: 40px;
+}
+
+.games-group > h3 {
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-size: 1.35rem;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.game-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--purple-light);
+}
+
+.game-card img {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.game-card-content {
+  padding: 16px;
+}
+
+.game-card h3 {
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.game-card p,
+.game-achievements {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.game-achievements {
+  margin-top: 4px;
+}
+
+.games-more {
+  color: var(--text-muted);
+  margin-top: 32px;
+  font-style: italic;
+}

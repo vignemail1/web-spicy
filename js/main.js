@@ -31,6 +31,68 @@ function renderStats() {
   `).join("");
 }
 
+function renderGames() {
+  const recentGames = document.getElementById("recent-games");
+  const olderGames = document.getElementById("older-games");
+  const gamesMore = document.getElementById("games-more");
+
+  const eligibleGames = SITE_DATA.games.filter(
+    game => Number(game.playtime_forever) >= 1000
+  );
+
+  const recent = eligibleGames.filter(
+    game => Number(game.playtime_2weeks) > 0
+  );
+
+  const older = eligibleGames.filter(
+    game => Number(game.playtime_2weeks) === 0
+  );
+
+  const createCard = game => {
+    const achievements =
+      game.achievements_unlocked != null &&
+      game.achievements_total != null
+        ? `
+          <div class="game-achievements">
+            Succès : ${game.achievements_unlocked}/${game.achievements_total}
+            ${
+              game.achievements_percentage != null
+                ? `(${game.achievements_percentage} %)`
+                : ""
+            }
+          </div>
+        `
+        : "";
+
+    return `
+      <article class="game-card">
+        <a href="${game.store_url}" target="_blank" rel="noopener">
+          <img
+            src="${game.cover_url}"
+            alt="Couverture de ${game.title_fr}"
+            loading="lazy"
+          >
+          <div class="game-card-content">
+            <h3>${game.title_fr}</h3>
+            <p>${game.playtime_forever_hours} h jouées</p>
+            ${achievements}
+          </div>
+        </a>
+      </article>
+    `;
+  };
+
+  recentGames.innerHTML = recent.map(createCard).join("");
+  olderGames.innerHTML = older.map(createCard).join("");
+
+  const otherGamesCount = SITE_DATA.games.length - eligibleGames.length;
+
+  gamesMore.textContent =
+    otherGamesCount > 0
+      ? `Et ${otherGamesCount} autres jeux`
+      : "";
+}
+
 function renderAbout() {
   document.getElementById("about-text").textContent = SITE_DATA.about.text;
   const tags = document.getElementById("about-tags");
@@ -89,6 +151,7 @@ function init() {
   renderStats();
   renderAbout();
   renderSetup();
+  renderGames();
   renderPartners();
   renderFooter();
 }
