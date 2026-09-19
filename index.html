@@ -65,7 +65,8 @@
         <img id="setup-img" src="" alt="Setup Gaming Spicy_FR">
       </div>
       <div class="setup-image">
-        <img id="setup-feat" src="https://spicy-assets.vignemail1.eu/spicy-setup.png" alt="Détails Setup Gaming Spicy_FR">
+        <img id="setup-feat" class="image-zoom"
+          data-full-image="https://spicy-assets.vignemail1.eu/spicy-setup.png" src="https://spicy-assets.vignemail1.eu/spicy-setup.png" alt="Détails Setup Gaming Spicy_FR">
       </div>
       <div class="setup-features" id="setup-features"></div>
     </div>
@@ -113,5 +114,92 @@
 
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
+
+<canvas id="stars" aria-hidden="true"></canvas>
+<div id="imagePopup" class="popup" aria-hidden="true">
+  <button class="popup-close" aria-label="Fermer">&times;</button>
+  <img id="popupImage" alt="">
+</div>
+
+
+<script>
+// background stars
+  const canvas = document.querySelector("#stars");
+  const ctx = canvas.getContext("2d");
+  let stars = [];
+
+  function resizeCanvas() {
+    const ratio = window.devicePixelRatio || 1;
+
+    canvas.width = window.innerWidth * ratio;
+    canvas.height = window.innerHeight * ratio;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+    stars = Array.from(
+      { length: Math.min(100, Math.floor(window.innerWidth / 12)) },
+      () => ({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: Math.random() * 1.8 + 0.5,
+        speed: Math.random() * 0.35 + 0.15,
+        opacity: Math.random() * 0.7 + 0.3
+      })
+    );
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+    for (const star of stars) {
+      ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+      ctx.fill();
+
+      star.y += star.speed;
+
+      if (star.y > window.innerHeight) {
+        star.y = -star.size;
+        star.x = Math.random() * window.innerWidth;
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+
+  resizeCanvas();
+  animate();
+
+  // image zoom
+  const image = document.querySelector(".image-zoom");
+  const popup = document.querySelector("#imagePopup");
+  const popupImage = document.querySelector("#popupImage");
+  const closeButton = document.querySelector(".popup-close");
+
+  function closePopup() {
+    popup.classList.remove("open");
+    popup.setAttribute("aria-hidden", "true");
+  }
+
+  image.addEventListener("click", () => {
+    popupImage.src = image.dataset.fullImage || image.src;
+    popupImage.alt = image.alt;
+    popup.classList.add("open");
+    popup.setAttribute("aria-hidden", "false");
+  });
+
+  closeButton.addEventListener("click", closePopup);
+
+  popup.addEventListener("click", (event) => {
+    if (event.target === popup) closePopup();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closePopup();
+  });
+</script>
+
 </body>
 </html>

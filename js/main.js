@@ -1,7 +1,3 @@
-// ============================================
-// MOTEUR DE RENDU - ne contient aucune donnee en dur
-// Toutes les donnees viennent de js/data.js (SITE_DATA)
-// ============================================
 
 function renderNav() {
   const nav = document.getElementById("main-nav");
