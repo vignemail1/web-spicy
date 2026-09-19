@@ -1,9 +1,9 @@
 const SITE_DATA = {
   nav: [
-    { label: "Accueil", href: "#accueil" },
-    { label: "Jeux", href: "#jeux" },
-    { label: "Setup", href: "#setup" },
-    { label: "Partenaires", href: "#partenaires" },
+    { label: "Accueil", href: ".#accueil" },
+    { label: "Setup", href: ".#setup" },
+    { label: "Partenaires", href: ".#partenaires" },
+    { label: "Jeux", href: ".#jeux" },
   ],
 
   twitchUrl: "https://twitch.tv/spicy_fr",
