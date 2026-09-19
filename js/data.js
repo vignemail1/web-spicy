@@ -1,7 +1,3 @@
-// ============================================
-// DONNEES DU SITE SPICY_FR
-// Modifier uniquement ce fichier pour changer le contenu
-// ============================================
 
 const SITE_DATA = {
   nav: [
@@ -20,8 +16,9 @@ const SITE_DATA = {
   },
 
   stats: [
-    { value: "43.6k", label: "Followers Twitch" },
-    { value: "5 ans", label: "de Stream" },
+    { value: "44k", label: "Followers Twitch" },
+    { value: "8 ans", label: "de Stream" },
+    { value: "5 ans", label: "de partenariat Twitch" },
     { value: "100%", label: "Good Vibes" }
   ],
 

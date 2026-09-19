@@ -10,6 +10,12 @@
 <script data-goatcounter="https://spicy-fr.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
+
+<style>
+  /* Petit ajustement local pour le lien vers les mentions légales (cohérent avec .footer-socials a:hover) */
+  .footer-copy a { color: var(--text-muted); transition: color 0.2s; }
+  .footer-copy a:hover { color: var(--pink); }
+</style>
 <body>
 
 <header class="site-header">
@@ -65,6 +71,18 @@
     </div>
   </section>
 
+    <section id="partenaires" class="section partners">
+      <div class="container">
+        <h2 class="texte-degrade">Nos Partenaires &amp; Codes Promos 🎁</h2>
+        <p class="section-subtitle" id="partners-subtitle"></p>
+        <div class="partners-grid" id="partners-grid"></div>
+        <div class="partners-cta">
+          <a class="btn btn-primary" id="partners-contact-btn" href="">Devenir Partenaire</a>
+          <p>Intéressé par un partenariat ? Contactez-moi !</p>
+        </div>
+      </div>
+    </section>
+
   <section id="games" class="section games">
     <div class="container">
       <h2 class="texte-degrade">Mes jeux</h2>
@@ -83,25 +101,13 @@
       <p class="games-more" id="games-more"></p>
     </div>
   </section>
-
-  <section id="partenaires" class="section partners">
-    <div class="container">
-      <h2 class="texte-degrade">Nos Partenaires &amp; Codes Promos 🎁</h2>
-      <p class="section-subtitle" id="partners-subtitle"></p>
-      <div class="partners-grid" id="partners-grid"></div>
-      <div class="partners-cta">
-        <a class="btn btn-primary" id="partners-contact-btn" href="mailto:contact@spicy-fr.com">Devenir Partenaire</a>
-        <p>Intéressé par un partenariat ? Contactez-moi !</p>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">Spicy_FR</div>
     <div class="footer-socials" id="footer-socials"></div>
-    <p class="footer-copy">© 2026 Spicy_FR • Site communautaire non-officiel</p>
+    <p class="footer-copy">© 2026 Spicy_FR • Site communautaire non-officiel • <a href="mentions.html">Mentions légales &amp; crédits</a></p>
   </div>
 </footer>
 

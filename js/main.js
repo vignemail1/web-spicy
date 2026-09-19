@@ -123,7 +123,7 @@ window.copyCode = copyCode;
 
 function renderPartners() {
   document.getElementById("partners-subtitle").textContent = SITE_DATA.partners.subtitle;
-  document.getElementById("partners-contact-btn").href = `mailto:${SITE_DATA.contactEmail}`;
+  document.getElementById("partners-contact-btn").href = `mailto:${SITE_DATA.contactEmail}?subject=Nous%20sommes%20int%C3%A9ress%C3%A9s%20par%20vous%20proposer%20un%20partenariat`;
 
   const grid = document.getElementById("partners-grid");
   grid.innerHTML = SITE_DATA.partners.list.map(p => `
