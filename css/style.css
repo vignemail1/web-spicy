@@ -546,7 +546,7 @@ h3 {
 }
 
 .game-card {
-  background: var(--card-bg);
+  background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -563,14 +563,14 @@ h3 {
 
 .game-card img {
   width: 100%;
-  max-width: 220px;
   aspect-ratio: 2 / 3;
   object-fit: cover;
-  margin: 0 auto;
+  display: block;
 }
 
 .game-card-content {
   padding: 16px;
+  background: var(--bg-alt);
 }
 
 .game-card h3 {
