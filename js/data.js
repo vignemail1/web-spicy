@@ -248,13 +248,6 @@ const SITE_DATA = {
       "match_score": 94.12
     },
     {
-      "app_id": 648800,
-      "title": "Raft",
-      "csv_title": "Minecraft",
-      "match_method": "fuzzy",
-      "match_score": 61.54
-    },
-    {
       "app_id": 391220,
       "title": "Rise of the Tomb Raider",
       "csv_title": "Rise of the Tomb Raider",
