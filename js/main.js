@@ -54,12 +54,31 @@ function renderGames() {
       game.achievements_unlocked != null && game.achievements_total != null
         ? `
           <div class="game-achievements">
-            Succès : ${game.achievements_unlocked}/${game.achievements_total}
-            ${
-              game.achievements_percentage != null
-                ? `(` + Math.round(game.achievements_percentage) + `%)`
-                : ""
-            }
+            <div class="achievements-label">
+              Succès : ${game.achievements_unlocked}/${game.achievements_total}
+            </div>
+
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow="${game.achievements_unlocked}"
+              aria-valuemin="0"
+              aria-valuemax="${game.achievements_total}"
+            >
+              <div
+                class="progress-bar-fill"
+                style="width: ${
+                  game.achievements_total > 0
+                    ? Math.min(
+                        100,
+                        (game.achievements_unlocked /
+                          game.achievements_total) *
+                          100,
+                      )
+                    : 0
+                }%"
+              ></div>
+            </div>
           </div>
         `
         : "";
