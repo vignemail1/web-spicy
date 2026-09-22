@@ -243,7 +243,7 @@ h2 {
 }
 
 /* Aura du bouton lorsque le live est actif */
-#hero-live-btn.live-now {
+#live-link.live-now,#hero-live-btn.live-now {
   background: linear-gradient(135deg, #9146ff, #b47cff);
   box-shadow:
     0 0 8px rgba(145, 70, 255, 0.8),
@@ -271,7 +271,7 @@ h2 {
 
 /* Respecte les préférences d'accessibilité */
 @media (prefers-reduced-motion: reduce) {
-  #hero-live-btn.live-now {
+  #live-link.live-now,#hero-live-btn.live-now {
     animation: none;
   }
 }

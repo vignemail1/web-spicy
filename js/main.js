@@ -224,6 +224,7 @@ let streamCheckController = null;
 function setStreamStatus(isLive, uptimeMessage = "") {
   const badge = document.getElementById("stream-status");
   const liveButton = document.getElementById("hero-live-btn");
+  const otherLiveButton = document.getElementById("live-link");
 
   if (!badge || !liveButton) return;
 
@@ -235,6 +236,9 @@ function setStreamStatus(isLive, uptimeMessage = "") {
     liveButton.classList.add("live-now");
     liveButton.setAttribute("aria-label", "Rejoindre le live Twitch");
 
+    otherLiveButton.classList.add("live-now");
+    otherLiveButton.setAttribute("aria-label", "Rejoindre le live Twitch");
+
     if (uptimeMessage) {
       badge.title = uptimeMessage;
     }
@@ -245,6 +249,10 @@ function setStreamStatus(isLive, uptimeMessage = "") {
 
     liveButton.classList.remove("live-now");
     liveButton.removeAttribute("aria-label");
+
+    otherLiveButton.classList.remove("live-now");
+    otherLiveButton.removeAttribute("aria-label");
+
     badge.removeAttribute("title");
   }
 }
