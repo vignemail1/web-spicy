@@ -159,13 +159,19 @@ function renderSetup() {
 }
 
 function copyCode(code, btn) {
-  navigator.clipboard.writeText(code).then(() => {
-    const original = btn.textContent;
-    btn.textContent = "Copié !";
-    setTimeout(() => {
-      btn.textContent = original;
-    }, 1500);
-  });
+  const originalChildren = [...btn.childNodes].map((node) => node.cloneNode(true));
+
+  navigator.clipboard.writeText(code)
+    .then(() => {
+      btn.replaceChildren("Copié !");
+
+      setTimeout(() => {
+        btn.replaceChildren(...originalChildren);
+      }, 1500);
+    })
+    .catch((error) => {
+      console.error("Impossible de copier le code :", error);
+    });
 }
 window.copyCode = copyCode;
 
