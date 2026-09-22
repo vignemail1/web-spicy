@@ -639,6 +639,7 @@ h2 {
 }
 
 .game-card {
+  max-width: 300px;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius);

@@ -31,107 +31,99 @@ function renderStats() {
 }
 
 function renderGames() {
-  const recentGames = document.getElementById("recent-games");
-  const olderGames = document.getElementById("older-games");
-  const gamesMore = document.getElementById("games-more");
-  const recent_threshold = 25;
-  const forever_threashold = 1020;
+  const recentGamesEl = document.getElementById("recent-games");
+  const yearPlayedGamesEl = document.getElementById("year-played-games");
+  const pinnedGamesEl = document.getElementById("pinned-games");
+  const olderGamesEl = document.getElementById("older-games");
+  const gamesMoreEl = document.getElementById("games-more");
+  const recentThreshold = 25;
+  const foreverThreshold = 1000;
 
-  const recent = SITE_DATA.games
-    .filter((game) => Number(game.playtime_2weeks) >= recent_threshold)
-    .sort((a, b) => Number(b.playtime_forever) - Number(a.playtime_forever));
+  // Combine les deux sources sans doublons, en privilégiant SITE_DATA.games.
+  const allGames = [];
+  const seenAppIds = new Set();
+  for (const game of [...(SITE_DATA.games || []), ...(SITE_DATA.otherGames || [])]) {
+    const appId = Number(game?.app_id);
+    if (game && Number.isFinite(appId) && !seenAppIds.has(appId)) {
+      seenAppIds.add(appId);
+      allGames.push(game);
+    }
+  }
 
-  const older = SITE_DATA.games
-    .filter(
-      (game) =>
-        Number(game.playtime_2weeks) < recent_threshold &&
-        Number(game.playtime_forever) >= forever_threashold,
-    )
+  const recent = allGames
+    .filter((game) => Number(game.playtime_2weeks) >= recentThreshold)
     .sort((a, b) => Number(b.playtime_forever) - Number(a.playtime_forever));
+  const recentIds = new Set(recent.map((game) => Number(game.app_id)));
+
+  const yearIds = new Set(
+    (SITE_DATA.yearPlayedGame || []).map((game) => Number(game.app_id)),
+  );
+  const yearPlayed = allGames
+    .filter((game) => {
+      const appId = Number(game.app_id);
+      return yearIds.has(appId) && !recentIds.has(appId);
+    })
+    .sort((a, b) => Number(b.playtime_forever) - Number(a.playtime_forever));
+  const yearPlayedIds = new Set(yearPlayed.map((game) => Number(game.app_id)));
+
+  const pinned = allGames
+    .filter((game) => {
+      return game.pinned || false;
+    }).sort((a, b) => Number(b.playtime_forever) - Number(a.playtime_forever));
+
+  const older = allGames
+    .filter((game) => {
+      const appId = Number(game.app_id);
+      return (
+        Number(game.playtime_forever) >= foreverThreshold &&
+        !recentIds.has(appId) &&
+        !yearPlayedIds.has(appId)
+      );
+    })
+    .sort((a, b) => Number(b.playtime_forever) - Number(a.playtime_forever));
+  const displayedIds = new Set([
+    ...recentIds,
+    ...yearPlayedIds,
+    ...pinned.map((game) => Number(game.app_id)),
+    // ...older.map((game) => Number(game.app_id)),
+  ]);
 
   const createCard = (game) => {
-    const achievements =
-      game.achievements_unlocked != null && game.achievements_total != null
-        ? `
-          <div class="game-achievements">
-            <div class="achievements-label">
-              Succès : ${game.achievements_unlocked}/${game.achievements_total}
-            </div>
-
-            <div
-              class="progress-bar"
-              role="progressbar"
-              aria-valuenow="${game.achievements_unlocked}"
-              aria-valuemin="0"
-              aria-valuemax="${game.achievements_total}"
-            >
-              <div
-                class="progress-bar-fill"
-                style="width: ${
-                  game.achievements_total > 0
-                    ? Math.min(
-                        100,
-                        (game.achievements_unlocked /
-                          game.achievements_total) *
-                          100,
-                      )
-                    : 0
-                }%"
-              ></div>
-            </div>
+    const hasAchievements =
+      game.achievements_unlocked != null && game.achievements_total != null;
+    const progress = hasAchievements && Number(game.achievements_total) > 0
+      ? Math.min(100, (Number(game.achievements_unlocked) / Number(game.achievements_total)) * 100)
+      : 0;
+    const achievements = hasAchievements
+      ? `<div class="game-achievements">
+          <div class="achievements-label">Succès : ${game.achievements_unlocked}/${game.achievements_total}</div>
+          <div class="progress-bar" role="progressbar" aria-valuenow="${game.achievements_unlocked}" aria-valuemin="0" aria-valuemax="${game.achievements_total}">
+            <div class="progress-bar-fill" style="width: ${progress}%"></div>
           </div>
-        `
-        : "";
-
-    return `
-      <article class="game-card">
-        <a href="${game.store_url}" target="_blank" rel="noopener">
-          <img
-            src="${game.cover_url}"
-            alt="Couverture de ${game.title_fr}"
-            loading="lazy"
-          >
-          <div class="game-card-content">
-            <h3>${game.title_fr}</h3>
-            <p>${game.playtime_forever_hours} h jouées</p>
-            ${achievements}
-          </div>
-        </a>
-      </article>
-    `;
+        </div>`
+      : "";
+    return `<article class="game-card">
+      <a href="${game.store_url}" target="_blank" rel="noopener">
+        <img src="${game.cover_url}" alt="Couverture de ${game.title_fr}" loading="lazy">
+        <div class="game-card-content">
+          <h3>${game.title_fr}</h3>
+          <p>${game.playtime_forever_hours} h jouées</p>
+          ${achievements}
+        </div>
+      </a>
+    </article>`;
   };
 
-  /*
-  let recentPlaytime = recent.reduce(
-    (total, game) => total + Number(game.playtime_2weeks_hours || 0),
-    0
-  );
+  recentGamesEl.innerHTML = recent.map(createCard).join("");
+  yearPlayedGamesEl.innerHTML = yearPlayed.map(createCard).join("");
+  // olderGamesEl.innerHTML = older.map(createCard).join("");
+  pinnedGamesEl.innerHTML = pinned.map(createCard).join("");
 
-  let olderPlaytime = older.reduce(
-    (total, game) => total + Number(game.playtime_forever_hours || 0),
-    0
-  );
-
-  const recentPlaytimeElement = document.getElementById('recent-playtime');
-  if (recentPlaytime > 0) {
-    recentPlaytime = Math.ceil(recentPlaytime);
-    recentPlaytimeElement.innerHTML = ` (${recentPlaytime} h en 2 semaines)`;
-  }
-  const olderPlaytimeElement = document.getElementById('older-playtime');
-  if (olderPlaytime > 0) {
-    olderPlaytime = Math.ceil(olderPlaytime);
-    olderPlaytimeElement.innerHTML = ` (${olderPlaytime} h)`;
-  }
- */
-  recentGames.innerHTML = recent.map(createCard).join("");
-  olderGames.innerHTML = older.map(createCard).join("");
-
-  const otherGamesCount = SITE_DATA.games.length - recent.length - older.length;
-
-  gamesMore.textContent =
-    otherGamesCount > 0 ? `Et ${otherGamesCount} autres jeux` : "";
+  const remainingCount = allGames.filter((game) => !displayedIds.has(Number(game.app_id))).length;
+  gamesMoreEl.textContent = remainingCount > 0
+    ? `et ${remainingCount} autre${remainingCount > 1 ? "s" : ""} jeu${remainingCount > 1 ? "x" : ""}.`
+    : "";
 }
-
 function renderAbout() {
   document.getElementById("about-text").textContent = SITE_DATA.about.text;
   const tags = document.getElementById("about-tags");

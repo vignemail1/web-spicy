@@ -85,23 +85,252 @@ const SITE_DATA = {
     { name: "Discord", url: "https://discord.gg/yQ9vps6K5a" },
   ],
 
+  yearPlayedGame: [
+    {
+      "app_id": 1808500,
+      "title": "ARC Raiders",
+      "csv_title": "ARC Raiders",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 3321460,
+      "title": "Crimson Desert Enhanced",
+      "csv_title": "Crimson Desert",
+      "match_method": "alias",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 292030,
+      "title": "The Witcher 3: Wild Hunt - Complete Edition",
+      "csv_title": "The Witcher 3: Wild Hunt",
+      "match_method": "fuzzy",
+      "match_score": 73.02
+    },
+    {
+      "app_id": 3751950,
+      "title": "Assassin's Creed Black Flag Resynced",
+      "csv_title": "Assassin's Creed Black Flag Resynced",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 1903340,
+      "title": "Clair Obscur: Expedition 33",
+      "csv_title": "Clair Obscur: Expedition 33",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 812140,
+      "title": "Assassin's Creed Odyssey",
+      "csv_title": "Assassin's Creed Odyssey",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 1462040,
+      "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+      "csv_title": "FINAL FANTASY VII REMAKE",
+      "match_method": "alias",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 990080,
+      "title": "Hogwarts Legacy : L'Héritage de Poudlard",
+      "csv_title": "Hogwarts Legacy",
+      "match_method": "fuzzy",
+      "match_score": 56.6
+    },
+    {
+      "app_id": 3751260,
+      "title": "The Blood of Dawnwalker",
+      "csv_title": "The Blood of Dawnwalker",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 582160,
+      "title": "Assassin's Creed Origins",
+      "csv_title": "Assassin's Creed Origins",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 3764200,
+      "title": "Resident Evil Requiem",
+      "csv_title": "RESIDENT EVIL: requiem",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 1091500,
+      "title": "Cyberpunk 2077",
+      "csv_title": "Cyberpunk 2077",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 2561580,
+      "title": "Horizon Zero Dawn™ Remastered",
+      "csv_title": "Horizon Zero Dawn",
+      "match_method": "fuzzy",
+      "match_score": 72.34
+    },
+    {
+      "app_id": 2531310,
+      "title": "The Last of Us™ Part II Remastered",
+      "csv_title": "The Last of Us Part II Remastered",
+      "match_method": "fuzzy",
+      "match_score": 97.06
+    },
+    {
+      "app_id": 377160,
+      "title": "Fallout 4",
+      "csv_title": "Fallout 4",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 1888930,
+      "title": "The Last of Us™ Part I",
+      "csv_title": "The Last of Us Part I",
+      "match_method": "fuzzy",
+      "match_score": 95.45
+    },
+    {
+      "app_id": 2713000,
+      "title": "Resonance: A Plague Tale Legacy",
+      "csv_title": "Resonance: A Plague Tale Legacy",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 1149460,
+      "title": "Icarus",
+      "csv_title": "SAROS",
+      "match_method": "fuzzy",
+      "match_score": 54.55
+    },
+    {
+      "app_id": 2215430,
+      "title": "Ghost of Tsushima DIRECTOR'S CUT",
+      "csv_title": "Ghost of Tsushima",
+      "match_method": "fuzzy",
+      "match_score": 69.39
+    },
+    {
+      "app_id": 2909400,
+      "title": "FINAL FANTASY VII REBIRTH",
+      "csv_title": "FINAL FANTASY VII REBIRTH",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 1435790,
+      "title": "Escape Simulator",
+      "csv_title": "Escape Simulator",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 4704690,
+      "title": "MECCHA CHAMELEON",
+      "csv_title": "MECCHA CHAMELEON",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 1771300,
+      "title": "Kingdom Come: Deliverance II",
+      "csv_title": "Kingdom Come: Deliverance",
+      "match_method": "fuzzy",
+      "match_score": 94.12
+    },
+    {
+      "app_id": 648800,
+      "title": "Raft",
+      "csv_title": "Minecraft",
+      "match_method": "fuzzy",
+      "match_score": 61.54
+    },
+    {
+      "app_id": 391220,
+      "title": "Rise of the Tomb Raider",
+      "csv_title": "Rise of the Tomb Raider",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 2981220,
+      "title": "Forefront",
+      "csv_title": "Forefront",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 1170970,
+      "title": "Marbles on Stream",
+      "csv_title": "Marbles on Stream",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      "app_id": 1222140,
+      "title": "Detroit: Become Human",
+      "csv_title": "Detroit: Become Human",
+      "match_method": "exact",
+      "match_score": 100.0
+    },
+    {
+      // other platform
+      app_id: 1174180,
+      title: "Red Dead Redemption II",
+    }
+  ],
+
+  /*
+  pinned:
+  - app_id: 1962663, title_fr: "Call of Duty: Warzone",
+  - app_id: 578080, title_fr: "PUBG: BATTLEGROUNDS",
+  */
+
+  otherGames: [
+    {
+      // playtime de TwitchTracker
+      app_id: 1962663,
+      title_fr: "Call of Duty: Warzone",
+      release_year: null,
+      cover_url: "assets/images/games/warzone.jpg",
+      store_url: "https://store.steampowered.com/app/1962663",
+      playtime_forever: 690540,
+      playtime_forever_hours: 11509,
+      playtime_2weeks: 0,
+      playtime_2weeks_hours: 0,
+      achievements_unlocked: null,
+      achievements_total: null,
+      achievements_percentage: null,
+      pinned: true
+    },
+    {
+      // other platform
+      app_id: 1174180,
+      title_fr: "Red Dead Redemption II",
+      release_year: null,
+      cover_url: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_616x353.jpg",
+      store_url: "https://store.steampowered.com/app/1174180",
+      playtime_forever: 4200,
+      playtime_forever_hours: 70,
+      playtime_2weeks: 0,
+      playtime_2weeks_hours: 0,
+      achievements_unlocked: null,
+      achievements_total: null,
+      achievements_percentage: null
+    }
+  ],
+
   games:
     [
-      {
-        // playtime de TwitchTracker
-        app_id: 1962663,
-        title_fr: "Call of Duty: Warzone",
-        release_year: null,
-        cover_url: "assets/images/games/warzone.jpg",
-        store_url: "https://store.steampowered.com/app/1962663",
-        playtime_forever: 690540,
-        playtime_forever_hours: 11509,
-        playtime_2weeks: 0,
-        playtime_2weeks_hours: 0,
-        achievements_unlocked: null,
-        achievements_total: null,
-        achievements_percentage: null,
-      },
       {
         app_id: 3751260,
         title_fr: "The Blood of Dawnwalker",
@@ -221,6 +450,7 @@ const SITE_DATA = {
         achievements_unlocked: 31,
         achievements_total: 37,
         achievements_percentage: 83.78,
+        pinned: true
       },
       {
         app_id: 1808500,
