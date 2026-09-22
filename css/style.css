@@ -51,6 +51,14 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Foglihten No07";
+  src: url("../assets/fonts/FoglihtenNo07.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -69,6 +77,12 @@ img {
 h1,
 h2,
 h3 {
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Foglihten No07", cursive;
+  font-weight: 400;
   line-height: 1.2;
 }
 
