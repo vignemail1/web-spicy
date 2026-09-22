@@ -206,13 +206,6 @@ const SITE_DATA = {
       "match_score": 100.0
     },
     {
-      "app_id": 1149460,
-      "title": "Icarus",
-      "csv_title": "SAROS",
-      "match_method": "fuzzy",
-      "match_score": 54.55
-    },
-    {
       "app_id": 2215430,
       "title": "Ghost of Tsushima DIRECTOR'S CUT",
       "csv_title": "Ghost of Tsushima",
