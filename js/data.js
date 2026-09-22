@@ -6,6 +6,7 @@ const SITE_DATA = {
     { label: "Jeux", href: ".#jeux" },
   ],
 
+  twitchChannel: 'spicy_fr',
   twitchUrl: "https://twitch.tv/spicy_fr",
 
   hero: {

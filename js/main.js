@@ -193,6 +193,102 @@ function init() {
   renderGames();
   renderPartners();
   renderFooter();
+  startTwitchStatusPolling();
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+const TWITCH_CHANNEL = SITE_DATA.twitchChannel;
+const TWITCH_UPTIME_URL =
+  `https://decapi.me/twitch/uptime/${TWITCH_CHANNEL}`;
+
+let streamCheckController = null;
+
+function setStreamStatus(isLive, uptimeMessage = "") {
+  const badge = document.getElementById("stream-status");
+  const liveButton = document.getElementById("hero-live-btn");
+
+  if (!badge || !liveButton) return;
+
+  if (isLive) {
+    badge.textContent = "🔴 EN LIVE";
+    badge.classList.remove("offline");
+    badge.classList.add("online");
+
+    liveButton.classList.add("live-now");
+    liveButton.setAttribute("aria-label", "Rejoindre le live Twitch");
+
+    if (uptimeMessage) {
+      badge.title = uptimeMessage;
+    }
+  } else {
+    badge.textContent = "HORS LIGNE";
+    badge.classList.remove("online");
+    badge.classList.add("offline");
+
+    liveButton.classList.remove("live-now");
+    liveButton.removeAttribute("aria-label");
+    badge.removeAttribute("title");
+  }
+}
+
+async function checkTwitchStatus() {
+  /*
+   * Annule une éventuelle requête précédente afin d'éviter
+   * plusieurs vérifications simultanées.
+   */
+  if (streamCheckController) {
+    streamCheckController.abort();
+  }
+
+  streamCheckController = new AbortController();
+
+  const timeout = setTimeout(() => {
+    streamCheckController.abort();
+  }, 8000);
+
+  try {
+    const response = await fetch(
+      `${TWITCH_UPTIME_URL}?t=${Date.now()}`,
+      {
+        method: "GET",
+        cache: "no-store",
+        signal: streamCheckController.signal,
+      },
+    );
+
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP ${response.status}`);
+    }
+
+    const message = (await response.text()).trim();
+
+    /*
+     * DecAPI renvoie un message contenant généralement
+     * "offline" ou "not live" lorsque la chaîne n'est pas en direct.
+     */
+    const isOffline =
+      /offline|not live|not currently live|isn't live/i.test(message);
+
+    setStreamStatus(!isOffline, message);
+  } catch (error) {
+    /*
+     * En cas d'erreur réseau, on évite d'afficher
+     * un faux "EN LIVE".
+     */
+    console.warn("Impossible de vérifier le statut Twitch :", error);
+    setStreamStatus(false);
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+function startTwitchStatusPolling() {
+  checkTwitchStatus();
+
+  /*
+   * Vérification toutes les 60 secondes.
+   * Cela évite de solliciter continuellement l'API tierce.
+   */
+  setInterval(checkTwitchStatus, 60 * 1000);
+}
