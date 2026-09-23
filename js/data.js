@@ -9,10 +9,17 @@ const SITE_DATA = {
   twitchChannel: 'spicy_fr',
   twitchUrl: "https://twitch.tv/spicy_fr",
 
+  // hero: {
+  //   tagline: "Snipeuse dans l'âme",
+  //   description:
+  //     "Ici on joue, on rigole, on progresse tranquille... et parfois on tryhard quand même 🥵. Je suis là tous les jours, alors passe faire un tour sur le live ! Que tu sois là pour les snipes, les fails épiques ou juste pour papoter, tu es le bienvenu dans la team spicy.",
+  //   avatar: "assets/images/avatar.jpg",
+  // },
+
   hero: {
     tagline: "Snipeuse dans l'âme",
     description:
-      "Ici on joue, on rigole, on progresse tranquille... et parfois on tryhard quand même 🥵. Je suis là tous les jours, alors passe faire un tour sur le live ! Que tu sois là pour les snipes, les fails épiques ou juste pour papoter, tu es le bienvenu dans la team spicy.",
+      "<p>👑 Mon univers</p><br>Que tu sois là pour suivre mes aventures, découvrir un nouveau jeu ou simplement passer un bon moment, tu es le bienvenu dans mon royaume.<br>Et toujours avec ma communauté, aussi surprenante que généreuse, qui rend chaque aventure encore plus unique. ❤️<br><br>Installe-toi, choisis ton aventure… et bienvenue chez Spicy. ✨",
     avatar: "assets/images/avatar.jpg",
   },
 
@@ -23,8 +30,13 @@ const SITE_DATA = {
     { value: "100%", label: "Good Vibes" },
   ],
 
+  // about: {
+  //   text: "Ici on joue, on rigole, on progresse tranquille... et parfois on tryhard quand même 🥵. Je suis là tous les jours, alors passe faire un tour sur le live ! Que tu sois là pour les snipes, les fails épiques ou juste pour papoter, tu es le bienvenu dans la team spicy.",
+  //   tags: ["#Warzone", "#ARCRaiders", "#Zombies"],
+  // },
+
   about: {
-    text: "Ici on joue, on rigole, on progresse tranquille... et parfois on tryhard quand même 🥵. Je suis là tous les jours, alors passe faire un tour sur le live ! Que tu sois là pour les snipes, les fails épiques ou juste pour papoter, tu es le bienvenu dans la team spicy.",
+    text: "Moi, c’est Spicy, créatrice de contenu et streameuse partenaire Twitch, passionnée de jeux vidéo et surtout de ces univers dans lesquels on peut complètement se perdre.<br><br>Après avoir commencé mon aventure sur Warzone avec mon Kar98, j’ai progressivement évolué vers le multigaming, avec une préférence pour les jeux qui racontent de grandes histoires et offrent de nouveaux mondes à explorer.<br><br>J’aime découvrir des personnages, explorer des paysages, vivre des aventures imprévues… et surtout partager ces moments avec ma communauté. Ici, chaque jeu est l’occasion de créer une nouvelle histoire, avec son lot de découvertes, de rires et parfois de belles catastrophes.<br><br>Même si mon univers s’est diversifié, certaines choses restent incontournables : le tryhard solo des camouflages sur Call of Duty, les jeux d'horreurs par période, les grandes aventures… et GTA, mon univers préféré, qui aura toujours une place particulière ici.",
     tags: ["#Warzone", "#ARCRaiders", "#Zombies"],
   },
 
@@ -288,6 +300,7 @@ const SITE_DATA = {
       title_fr: "Call of Duty: Warzone",
       release_year: null,
       cover_url: "assets/images/games/warzone.jpg",
+      // cover_url: "https://images.igdb.com/igdb/image/upload/t_cover_big/coa8id.webp",
       store_url: "https://store.steampowered.com/app/1962663",
       playtime_forever: 690540,
       playtime_forever_hours: 11509,
@@ -303,7 +316,8 @@ const SITE_DATA = {
       app_id: 1174180,
       title_fr: "Red Dead Redemption II",
       release_year: null,
-      cover_url: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_616x353.jpg",
+      // cover_url: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_616x353.jpg",
+      cover_url: "https://static-cdn.jtvnw.net/ttv-boxart/493959_IGDB-210x280.jpg",
       store_url: "https://store.steampowered.com/app/1174180",
       playtime_forever: 4200,
       playtime_forever_hours: 70,

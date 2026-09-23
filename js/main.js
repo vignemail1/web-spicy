@@ -12,7 +12,7 @@ function renderLiveLinks() {
 
 function renderHero() {
   document.getElementById("hero-tagline").textContent = SITE_DATA.hero.tagline;
-  document.getElementById("hero-desc").textContent = SITE_DATA.hero.description;
+  document.getElementById("hero-desc").innerHTML = SITE_DATA.hero.description;
   document.getElementById("avatar-img").src = SITE_DATA.hero.avatar;
 }
 
@@ -125,7 +125,7 @@ function renderGames() {
     : "";
 }
 function renderAbout() {
-  document.getElementById("about-text").textContent = SITE_DATA.about.text;
+  document.getElementById("about-text").innerHTML = SITE_DATA.about.text;
   const tags = document.getElementById("about-tags");
   tags.innerHTML = SITE_DATA.about.tags
     .map((t) => `<span class="tag">${t}</span>`)
@@ -171,7 +171,7 @@ function renderPartners() {
   document.getElementById("partners-subtitle").textContent =
     SITE_DATA.partners.subtitle;
   document.getElementById("partners-contact-btn").href =
-    `mailto:${SITE_DATA.contactEmail}?subject=Nous%20sommes%20int%C3%A9ress%C3%A9s%20par%20vous%20proposer%20un%20partenariat`;
+    `mailto:${SITE_DATA.contactEmail}`;
 
   const grid = document.getElementById("partners-grid");
   grid.innerHTML = SITE_DATA.partners.list
