@@ -419,7 +419,7 @@ h2 {
 .about-image {
   flex: 1 1 50%;
   display: flex;
-  justify-content: flex-end;
+  /*justify-content: flex-end;*/
 }
 
 .about-image img {
@@ -431,6 +431,14 @@ h2 {
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: 0 20px 60px rgba(139, 47, 214, 0.25);*/
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* ============================================

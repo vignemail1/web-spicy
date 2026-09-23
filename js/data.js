@@ -312,6 +312,22 @@ const SITE_DATA = {
       achievements_unlocked: null,
       achievements_total: null,
       achievements_percentage: null
+    },
+    {
+      // other platform
+      app_id: 3240220,
+      title_fr: "Grand Theft Auto V",
+      release_year: null,
+      cover_url: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3240220/header_french.jpg",
+      store_url: "https://store.steampowered.com/app/3240220",
+      playtime_forever: 32940,
+      playtime_forever_hours: 549,
+      playtime_2weeks: 0,
+      playtime_2weeks_hours: 0,
+      achievements_unlocked: null,
+      achievements_total: null,
+      achievements_percentage: null,
+      pinned: true
     }
   ],
 
