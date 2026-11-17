@@ -113,16 +113,37 @@ const SITE_DATA = {
       match_score: 100.0,
     },
     {
+      app_id: 1203620,
+      title: "Enshrouded",
+      csv_title: "Enshrouded",
+      match_method: "exact",
+      match_score: 100.0,
+    },
+    {
       app_id: 292030,
-      title: "The Witcher 3: Wild Hunt - Complete Edition",
+      title: "The Witcher 3: Wild Hunt — Remastered",
       csv_title: "The Witcher 3: Wild Hunt",
       match_method: "fuzzy",
-      match_score: 73.02,
+      match_score: 80.7,
     },
     {
       app_id: 3751950,
       title: "Assassin's Creed Black Flag Resynced",
       csv_title: "Assassin's Creed Black Flag Resynced",
+      match_method: "exact",
+      match_score: 100.0,
+    },
+    {
+      app_id: 377160,
+      title: "Fallout 4",
+      csv_title: "Fallout 4",
+      match_method: "exact",
+      match_score: 100.0,
+    },
+    {
+      app_id: 2909400,
+      title: "FINAL FANTASY VII REBIRTH",
+      csv_title: "FINAL FANTASY VII REBIRTH",
       match_method: "exact",
       match_score: 100.0,
     },
@@ -151,8 +172,8 @@ const SITE_DATA = {
       app_id: 990080,
       title: "Hogwarts Legacy : L'Héritage de Poudlard",
       csv_title: "Hogwarts Legacy",
-      match_method: "fuzzy",
-      match_score: 56.6,
+      match_method: "alias",
+      match_score: 100.0,
     },
     {
       app_id: 3751260,
@@ -186,8 +207,8 @@ const SITE_DATA = {
       app_id: 2561580,
       title: "Horizon Zero Dawn™ Remastered",
       csv_title: "Horizon Zero Dawn",
-      match_method: "fuzzy",
-      match_score: 72.34,
+      match_method: "alias",
+      match_score: 100.0,
     },
     {
       app_id: 2531310,
@@ -195,13 +216,6 @@ const SITE_DATA = {
       csv_title: "The Last of Us Part II Remastered",
       match_method: "fuzzy",
       match_score: 97.06,
-    },
-    {
-      app_id: 377160,
-      title: "Fallout 4",
-      csv_title: "Fallout 4",
-      match_method: "exact",
-      match_score: 100.0,
     },
     {
       app_id: 1888930,
@@ -218,30 +232,30 @@ const SITE_DATA = {
       match_score: 100.0,
     },
     {
+      app_id: 4704690,
+      title: "MECCHA CHAMELEON",
+      csv_title: "MECCHA CHAMELEON",
+      match_method: "exact",
+      match_score: 100.0,
+    },
+    {
+      app_id: 1426210,
+      title: "It Takes Two",
+      csv_title: "It Takes Two",
+      match_method: "exact",
+      match_score: 100.0,
+    },
+    {
       app_id: 2215430,
       title: "Ghost of Tsushima DIRECTOR'S CUT",
       csv_title: "Ghost of Tsushima",
-      match_method: "fuzzy",
-      match_score: 69.39,
-    },
-    {
-      app_id: 2909400,
-      title: "FINAL FANTASY VII REBIRTH",
-      csv_title: "FINAL FANTASY VII REBIRTH",
-      match_method: "exact",
+      match_method: "alias",
       match_score: 100.0,
     },
     {
       app_id: 1435790,
       title: "Escape Simulator",
       csv_title: "Escape Simulator",
-      match_method: "exact",
-      match_score: 100.0,
-    },
-    {
-      app_id: 4704690,
-      title: "MECCHA CHAMELEON",
-      csv_title: "MECCHA CHAMELEON",
       match_method: "exact",
       match_score: 100.0,
     },
@@ -253,9 +267,23 @@ const SITE_DATA = {
       match_score: 94.12,
     },
     {
-      app_id: 391220,
-      title: "Rise of the Tomb Raider",
-      csv_title: "Rise of the Tomb Raider",
+      app_id: 1636440,
+      title: "SILENT HILL: Townfall",
+      csv_title: "SILENT HILL: townfall",
+      match_method: "exact",
+      match_score: 100.0,
+    },
+    {
+      app_id: 5053820,
+      title: "Mimic Party",
+      csv_title: "Mimic Party",
+      match_method: "exact",
+      match_score: 100.0,
+    },
+    {
+      app_id: 4656000,
+      title: "BOMBANANA!",
+      csv_title: "BOMBANANA!",
       match_method: "exact",
       match_score: 100.0,
     },
@@ -267,9 +295,16 @@ const SITE_DATA = {
       match_score: 100.0,
     },
     {
-      app_id: 1170970,
-      title: "Marbles on Stream",
-      csv_title: "Marbles on Stream",
+      app_id: 202970,
+      title: "Call of Duty: Black Ops II",
+      csv_title: "Call of Duty: Black Ops 7",
+      match_method: "fuzzy",
+      match_score: 93.88,
+    },
+    {
+      app_id: 391220,
+      title: "Rise of the Tomb Raider",
+      csv_title: "Rise of the Tomb Raider",
       match_method: "exact",
       match_score: 100.0,
     },
@@ -281,20 +316,13 @@ const SITE_DATA = {
       match_score: 100.0,
     },
     {
-      app_id: 4656000,
-      title: "BOMBANANA!",
-    },
-    {
-      app_id: 5053820,
-      title: "Mimic Party",
-    },
-    {
-      // other platform
-      app_id: 1174180,
-      title: "Red Dead Redemption II",
+      app_id: 1170970,
+      title: "Marbles on Stream",
+      csv_title: "Marbles on Stream",
+      match_method: "exact",
+      match_score: 100.0,
     },
   ],
-
   /*
   pinned:
   - app_id: 1962663, title_fr: "Call of Duty: Warzone",
@@ -361,64 +389,47 @@ const SITE_DATA = {
       title_fr: "Enshrouded",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1203620/0f641453e3418029205a49c1960e5ae5cb1ce382/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1203620/0f641453e3418029205a49c1960e5ae5cb1ce382/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1203620",
-      playtime_forever: 4914,
-      playtime_2weeks: 4914,
-      achievements_unlocked: 19,
+      playtime_forever: 9462,
+      playtime_2weeks: 6036,
+      achievements_unlocked: 40,
       achievements_total: 58,
-      playtime_forever_hours: 81,
+      playtime_forever_hours: 157,
       playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
-      playtime_2weeks_hours: 81,
+      playtime_2weeks_hours: 100,
       playtime_2weeks_source: "spicy_FR_steam_Jeux_recent.html",
-      achievements_percentage: 32.76,
+      achievements_percentage: 68.97,
     },
     {
-      app_id: 1636440,
-      title_fr: "SILENT HILL: Townfall",
+      app_id: 1815780,
+      title_fr: "Asphalt Legends",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1636440/cdad5ea5a7f19f1394a6393416c83720664ecf81/library_capsule.jpg",
-      store_url: "https://store.steampowered.com/app/1636440",
-      playtime_forever: 204,
-      playtime_2weeks: 204,
-      achievements_unlocked: 1,
-      achievements_total: 36,
-      playtime_forever_hours: 3,
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1815780/db3decfe8ab2b63937cb13d2c23f8ec8737a6b4e/library_capsule.jpg",
+      store_url: "https://store.steampowered.com/app/1815780",
+      playtime_forever: 22,
+      playtime_2weeks: 22,
+      achievements_unlocked: null,
+      achievements_total: null,
+      playtime_forever_hours: 0,
       playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
-      playtime_2weeks_hours: 3,
+      playtime_2weeks_hours: 0,
       playtime_2weeks_source: "spicy_FR_steam_Jeux_recent.html",
-      achievements_percentage: 2.78,
-    },
-    {
-      app_id: 1426210,
-      title_fr: "It Takes Two",
-      release_year: null,
-      cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1426210/library_600x900.jpg",
-      store_url: "https://store.steampowered.com/app/1426210",
-      playtime_forever: 690,
-      playtime_2weeks: 132,
-      achievements_unlocked: 7,
-      achievements_total: 20,
-      playtime_forever_hours: 11,
-      playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
-      playtime_2weeks_hours: 2,
-      playtime_2weeks_source: "spicy_FR_steam_Jeux_recent.html",
-      achievements_percentage: 35.0,
+      achievements_percentage: null,
     },
     {
       app_id: 4732690,
       title_fr: "Arknights: Endfield",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/4732690/eafa0bcd71aa11a86a5d512be6e390d03c08ae1b/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/4732690/eafa0bcd71aa11a86a5d512be6e390d03c08ae1b/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/4732690",
-      playtime_forever: 45,
-      playtime_2weeks: 45,
+      playtime_forever: 61,
+      playtime_2weeks: 16,
       achievements_unlocked: null,
       achievements_total: null,
-      playtime_forever_hours: 0,
+      playtime_forever_hours: 1,
       playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
       playtime_2weeks_hours: 0,
       playtime_2weeks_source: "spicy_FR_steam_Jeux_recent.html",
@@ -429,10 +440,10 @@ const SITE_DATA = {
       title_fr: "MapleStory",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/216150/b77679b88067b6df1490d55c0002cd7902f671d7/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/216150/b87d53990f5e2b7cc52bd8077bb3cb9a95aff899/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/216150",
-      playtime_forever: 2,
-      playtime_2weeks: 2,
+      playtime_forever: 3,
+      playtime_2weeks: 3,
       achievements_unlocked: null,
       achievements_total: null,
       playtime_forever_hours: 0,
@@ -446,7 +457,7 @@ const SITE_DATA = {
       title_fr: "PUBG: BATTLEGROUNDS",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/578080/36a1a274b3a7870e475ea1e110e58db8a0803c41/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/578080/36a1a274b3a7870e475ea1e110e58db8a0803c41/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/578080",
       playtime_forever: 147306,
       playtime_2weeks: null,
@@ -464,7 +475,7 @@ const SITE_DATA = {
       title_fr: "ARC Raiders",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1808500/e33d26c3175e3f590a0153fdcf0f4863f6c84288/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1808500/e33d26c3175e3f590a0153fdcf0f4863f6c84288/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1808500",
       playtime_forever: 27774,
       playtime_2weeks: null,
@@ -481,7 +492,7 @@ const SITE_DATA = {
       title_fr: "Crimson Desert Enhanced",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3321460/85f762166594b84330761c11d3106182634c882c/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3321460/85f762166594b84330761c11d3106182634c882c/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3321460",
       playtime_forever: 17616,
       playtime_2weeks: null,
@@ -498,7 +509,7 @@ const SITE_DATA = {
       title_fr: "Palworld",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1623730/f85c38b444047c686d44eea5f649c9ae761fd06a/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1623730/f85c38b444047c686d44eea5f649c9ae761fd06a/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1623730",
       playtime_forever: 12750,
       playtime_2weeks: null,
@@ -515,7 +526,7 @@ const SITE_DATA = {
       title_fr: "The Witcher 3: Wild Hunt — Remastered",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/292030/dd1c19c4e41b120ddfa35734cc31f79254c25082/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/292030/dd1c19c4e41b120ddfa35734cc31f79254c25082/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/292030",
       playtime_forever: 6954,
       playtime_2weeks: null,
@@ -532,7 +543,7 @@ const SITE_DATA = {
       title_fr: "SCUM",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/513710/de0c9de9174be80968f8c7c2c91d59d50caf3d0a/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/513710/98dec59b7c31a508ff15a5d3528802b524282ad3/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/513710",
       playtime_forever: 6750,
       playtime_2weeks: null,
@@ -549,7 +560,7 @@ const SITE_DATA = {
       title_fr: "Assassin's Creed Black Flag Resynced",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3751950/36a1644b03afce1a648ab90b232196609e827539/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3751950/36a1644b03afce1a648ab90b232196609e827539/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3751950",
       playtime_forever: 6282,
       playtime_2weeks: null,
@@ -566,14 +577,14 @@ const SITE_DATA = {
       title_fr: "Marbles on Stream",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1170970/94e7aafc9128b8c7861857feab9630ce5e62ef30/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1170970/94e7aafc9128b8c7861857feab9630ce5e62ef30/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1170970",
       playtime_forever: 5502,
       playtime_2weeks: null,
       achievements_unlocked: null,
       achievements_total: null,
       playtime_forever_hours: 91,
-      playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
+      playtime_forever_source: "spicy_FR_steam_Jeux.html",
       playtime_2weeks_hours: null,
       playtime_2weeks_source: null,
       achievements_percentage: null,
@@ -583,7 +594,7 @@ const SITE_DATA = {
       title_fr: "Apex Legends",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1172470/b727d513ccbd272e35095089837d386176c59a97/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1172470/b727d513ccbd272e35095089837d386176c59a97/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1172470",
       playtime_forever: 5046,
       playtime_2weeks: null,
@@ -600,7 +611,7 @@ const SITE_DATA = {
       title_fr: "Fallout 4",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/377160/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/377160/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/377160",
       playtime_forever: 4644,
       playtime_2weeks: null,
@@ -617,7 +628,7 @@ const SITE_DATA = {
       title_fr: "Once Human",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2139460/5114e6359e5cb6009cba26274734c09642c7d155/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2139460/5114e6359e5cb6009cba26274734c09642c7d155/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2139460",
       playtime_forever: 4614,
       playtime_2weeks: null,
@@ -634,14 +645,14 @@ const SITE_DATA = {
       title_fr: "FINAL FANTASY VII REBIRTH",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2909400/771d94cceea4bf97bd8afeee5e09e31f15bd0196/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2909400/771d94cceea4bf97bd8afeee5e09e31f15bd0196/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2909400",
       playtime_forever: 4344,
       playtime_2weeks: null,
       achievements_unlocked: 32,
       achievements_total: 61,
       playtime_forever_hours: 72,
-      playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
+      playtime_forever_source: "spicy_FR_steam_Jeux.html",
       playtime_2weeks_hours: null,
       playtime_2weeks_source: null,
       achievements_percentage: 52.46,
@@ -651,7 +662,7 @@ const SITE_DATA = {
       title_fr: "Assassin's Creed Odyssey",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/812140/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/812140/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/812140",
       playtime_forever: 4188,
       playtime_2weeks: null,
@@ -668,7 +679,7 @@ const SITE_DATA = {
       title_fr: "Sea of Thieves",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1172620/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1172620/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1172620",
       playtime_forever: 4128,
       playtime_2weeks: null,
@@ -685,7 +696,7 @@ const SITE_DATA = {
       title_fr: "Icarus",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1149460/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1149460/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1149460",
       playtime_forever: 3876,
       playtime_2weeks: null,
@@ -702,7 +713,7 @@ const SITE_DATA = {
       title_fr: "Clair Obscur: Expedition 33",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1903340/8b21381a43ac5a535a838f723815f8fe14ceaf7c/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1903340/8b21381a43ac5a535a838f723815f8fe14ceaf7c/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1903340",
       playtime_forever: 3522,
       playtime_2weeks: null,
@@ -719,7 +730,7 @@ const SITE_DATA = {
       title_fr: "Z1 Battle Royale",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/433850/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/433850/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/433850",
       playtime_forever: 3498,
       playtime_2weeks: null,
@@ -736,7 +747,7 @@ const SITE_DATA = {
       title_fr: "The Forest",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/242760/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/242760/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/242760",
       playtime_forever: 3456,
       playtime_2weeks: null,
@@ -753,7 +764,7 @@ const SITE_DATA = {
       title_fr: "Assassin's Creed Origins",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/582160/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/582160/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/582160",
       playtime_forever: 3192,
       playtime_2weeks: null,
@@ -770,7 +781,7 @@ const SITE_DATA = {
       title_fr: "Supermarket Simulator",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2670630/f8f601388c633ebc39e19e7741aa3237138dac45/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2670630/f8f601388c633ebc39e19e7741aa3237138dac45/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2670630",
       playtime_forever: 2634,
       playtime_2weeks: null,
@@ -787,7 +798,7 @@ const SITE_DATA = {
       title_fr: "FINAL FANTASY VII REMAKE INTERGRADE",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1462040/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1462040/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1462040",
       playtime_forever: 2466,
       playtime_2weeks: null,
@@ -804,7 +815,7 @@ const SITE_DATA = {
       title_fr: "Raft",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/648800/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/648800/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/648800",
       playtime_forever: 2406,
       playtime_2weeks: null,
@@ -821,7 +832,7 @@ const SITE_DATA = {
       title_fr: "Hogwarts Legacy : L'Héritage de Poudlard",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/990080/dca9bb926befe37ff9754e3336cd9fe4c969c1e9/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/990080/dca9bb926befe37ff9754e3336cd9fe4c969c1e9/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/990080",
       playtime_forever: 2334,
       playtime_2weeks: null,
@@ -838,7 +849,7 @@ const SITE_DATA = {
       title_fr: "The Blood of Dawnwalker",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3751260/82769ab631e6e68b4a38bbba9fb5b74eb0d7db8d/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3751260/82769ab631e6e68b4a38bbba9fb5b74eb0d7db8d/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3751260",
       playtime_forever: 2322,
       playtime_2weeks: null,
@@ -855,7 +866,7 @@ const SITE_DATA = {
       title_fr: "Horizon Zero Dawn™ Remastered",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2561580/ae8e7f8cc7f0e494e6dfda3ee51161881b49acb7/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2561580/ae8e7f8cc7f0e494e6dfda3ee51161881b49acb7/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2561580",
       playtime_forever: 1956,
       playtime_2weeks: null,
@@ -872,7 +883,7 @@ const SITE_DATA = {
       title_fr: "Rust",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/252490/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/252490/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/252490",
       playtime_forever: 1788,
       playtime_2weeks: null,
@@ -889,7 +900,7 @@ const SITE_DATA = {
       title_fr: "Resident Evil Requiem",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3764200/ed3b2cae7d15f598f41006f5f1e605ec5517b5e4/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3764200/ed3b2cae7d15f598f41006f5f1e605ec5517b5e4/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3764200",
       playtime_forever: 1746,
       playtime_2weeks: null,
@@ -906,7 +917,7 @@ const SITE_DATA = {
       title_fr: "Cyberpunk 2077",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1091500/6399de67cce3cecadce7900e03f6e09ff910a235/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1091500/6399de67cce3cecadce7900e03f6e09ff910a235/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1091500",
       playtime_forever: 1734,
       playtime_2weeks: null,
@@ -923,7 +934,7 @@ const SITE_DATA = {
       title_fr: "Trials Fusion",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/245490/portrait.png",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/245490/portrait.png",
       store_url: "https://store.steampowered.com/app/245490",
       playtime_forever: 1608,
       playtime_2weeks: null,
@@ -940,7 +951,7 @@ const SITE_DATA = {
       title_fr: "Grounded",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/962130/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/962130/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/962130",
       playtime_forever: 1536,
       playtime_2weeks: null,
@@ -957,7 +968,7 @@ const SITE_DATA = {
       title_fr: "Tom Clancy's Rainbow Six Siege",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/359550/5878a9291aaf2334e08424c6db8e9635d9fa05b4/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/359550/5878a9291aaf2334e08424c6db8e9635d9fa05b4/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/359550",
       playtime_forever: 1416,
       playtime_2weeks: null,
@@ -974,7 +985,7 @@ const SITE_DATA = {
       title_fr: "The Last of Us™ Part II Remastered",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2531310/aeac394b61ac94b5d4ea939351baf3943ac0b282/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2531310/aeac394b61ac94b5d4ea939351baf3943ac0b282/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2531310",
       playtime_forever: 1416,
       playtime_2weeks: null,
@@ -991,7 +1002,7 @@ const SITE_DATA = {
       title_fr: "Chained Together",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2567870/e11d085911d98518e797f480407006be8d890f33/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2567870/e11d085911d98518e797f480407006be8d890f33/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2567870",
       playtime_forever: 1272,
       playtime_2weeks: null,
@@ -1008,7 +1019,7 @@ const SITE_DATA = {
       title_fr: "Borderlands 2",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/49520/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/49520/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/49520",
       playtime_forever: 1194,
       playtime_2weeks: null,
@@ -1025,7 +1036,7 @@ const SITE_DATA = {
       title_fr: "The Last of Us™ Part I",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1888930/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1888930/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1888930",
       playtime_forever: 1182,
       playtime_2weeks: null,
@@ -1042,7 +1053,7 @@ const SITE_DATA = {
       title_fr: "Resident Evil 3",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/952060/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/952060/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/952060",
       playtime_forever: 1080,
       playtime_2weeks: null,
@@ -1059,7 +1070,7 @@ const SITE_DATA = {
       title_fr: "Resident Evil Village",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1196590/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1196590/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1196590",
       playtime_forever: 1026,
       playtime_2weeks: null,
@@ -1076,7 +1087,7 @@ const SITE_DATA = {
       title_fr: "Resonance: A Plague Tale Legacy",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2713000/163fce5aece8c0e837705084309d9508380672ae/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2713000/163fce5aece8c0e837705084309d9508380672ae/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2713000",
       playtime_forever: 1020,
       playtime_2weeks: null,
@@ -1093,7 +1104,7 @@ const SITE_DATA = {
       title_fr: "Jurassic World Evolution",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/648350/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/648350/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/648350",
       playtime_forever: 1014,
       playtime_2weeks: null,
@@ -1110,7 +1121,7 @@ const SITE_DATA = {
       title_fr: "INSIDE",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/304430/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/304430/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/304430",
       playtime_forever: 906,
       playtime_2weeks: null,
@@ -1127,7 +1138,7 @@ const SITE_DATA = {
       title_fr: "Counter-Strike 2",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/730/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/730/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/730",
       playtime_forever: 816,
       playtime_2weeks: null,
@@ -1140,11 +1151,28 @@ const SITE_DATA = {
       achievements_percentage: 100.0,
     },
     {
+      app_id: 1426210,
+      title_fr: "It Takes Two",
+      release_year: null,
+      cover_url:
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1426210/library_600x900.jpg",
+      store_url: "https://store.steampowered.com/app/1426210",
+      playtime_forever: 690,
+      playtime_2weeks: null,
+      achievements_unlocked: 7,
+      achievements_total: 20,
+      playtime_forever_hours: 11,
+      playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
+      playtime_2weeks_hours: null,
+      playtime_2weeks_source: null,
+      achievements_percentage: 35.0,
+    },
+    {
       app_id: 755540,
       title_fr: "LIV",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/755540/d0b385c468ada347d0481e035c9621f7075f9f88/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/755540/d0b385c468ada347d0481e035c9621f7075f9f88/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/755540",
       playtime_forever: 660,
       playtime_2weeks: null,
@@ -1161,7 +1189,7 @@ const SITE_DATA = {
       title_fr: "Phasmophobia",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/739630/0b19136b9e98752001bb4c3ba8936774ac8ac7a7/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/739630/0b19136b9e98752001bb4c3ba8936774ac8ac7a7/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/739630",
       playtime_forever: 576,
       playtime_2weeks: null,
@@ -1178,14 +1206,14 @@ const SITE_DATA = {
       title_fr: "MECCHA CHAMELEON",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/4704690/ac3c3c6d61e772101de5f95ac08b425e1b878ca8/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/4704690/ac3c3c6d61e772101de5f95ac08b425e1b878ca8/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/4704690",
       playtime_forever: 576,
       playtime_2weeks: null,
       achievements_unlocked: null,
       achievements_total: null,
       playtime_forever_hours: 9,
-      playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
+      playtime_forever_source: "spicy_FR_steam_Jeux.html",
       playtime_2weeks_hours: null,
       playtime_2weeks_source: null,
       achievements_percentage: null,
@@ -1195,7 +1223,7 @@ const SITE_DATA = {
       title_fr: "Ghost of Tsushima DIRECTOR'S CUT",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2215430/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2215430/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2215430",
       playtime_forever: 546,
       playtime_2weeks: null,
@@ -1212,7 +1240,7 @@ const SITE_DATA = {
       title_fr: "Rocket League",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/252950/161e2a08ff71138d985e006df616970f670f2732/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/252950/161e2a08ff71138d985e006df616970f670f2732/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/252950",
       playtime_forever: 510,
       playtime_2weeks: null,
@@ -1229,7 +1257,7 @@ const SITE_DATA = {
       title_fr: "Worms W.M.D",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/327030/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/327030/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/327030",
       playtime_forever: 498,
       playtime_2weeks: null,
@@ -1246,7 +1274,7 @@ const SITE_DATA = {
       title_fr: "Outlast",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/238320/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/238320/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/238320",
       playtime_forever: 474,
       playtime_2weeks: null,
@@ -1263,7 +1291,7 @@ const SITE_DATA = {
       title_fr: "Escape Simulator",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1435790/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1435790/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1435790",
       playtime_forever: 450,
       playtime_2weeks: null,
@@ -1280,7 +1308,7 @@ const SITE_DATA = {
       title_fr: "Sons Of The Forest",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1326470/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1326470/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1326470",
       playtime_forever: 444,
       playtime_2weeks: null,
@@ -1297,7 +1325,7 @@ const SITE_DATA = {
       title_fr: "Green Hell",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/815370/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/815370/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/815370",
       playtime_forever: 438,
       playtime_2weeks: null,
@@ -1314,7 +1342,7 @@ const SITE_DATA = {
       title_fr: "Call of Duty 4: Modern Warfare (2007)",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/7940/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/7940/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/7940",
       playtime_forever: 390,
       playtime_2weeks: null,
@@ -1331,7 +1359,7 @@ const SITE_DATA = {
       title_fr: "Stray",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1332010/9c1bae81b2603c25ccf2a8f4944b3b58227005d7/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1332010/9c1bae81b2603c25ccf2a8f4944b3b58227005d7/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1332010",
       playtime_forever: 372,
       playtime_2weeks: null,
@@ -1348,7 +1376,7 @@ const SITE_DATA = {
       title_fr: "Trials Rising",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/641080/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/641080/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/641080",
       playtime_forever: 366,
       playtime_2weeks: null,
@@ -1365,7 +1393,7 @@ const SITE_DATA = {
       title_fr: "The Dark Pictures Anthology: House of Ashes",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1281590/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1281590/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1281590",
       playtime_forever: 360,
       playtime_2weeks: null,
@@ -1382,7 +1410,7 @@ const SITE_DATA = {
       title_fr: "Kingdom Come: Deliverance II",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1771300/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1771300/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1771300",
       playtime_forever: 360,
       playtime_2weeks: null,
@@ -1399,7 +1427,7 @@ const SITE_DATA = {
       title_fr: "Kallax",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1818280/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1818280/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1818280",
       playtime_forever: 324,
       playtime_2weeks: null,
@@ -1416,7 +1444,7 @@ const SITE_DATA = {
       title_fr: "Wallpaper Engine",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/431960/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/431960/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/431960",
       playtime_forever: 318,
       playtime_2weeks: null,
@@ -1433,7 +1461,7 @@ const SITE_DATA = {
       title_fr: "Visage",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/594330/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/594330/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/594330",
       playtime_forever: 312,
       playtime_2weeks: null,
@@ -1450,7 +1478,7 @@ const SITE_DATA = {
       title_fr: "The Dark Pictures Anthology: Little Hope",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1194630/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1194630/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1194630",
       playtime_forever: 306,
       playtime_2weeks: null,
@@ -1467,7 +1495,7 @@ const SITE_DATA = {
       title_fr: "Getting Over It with Bennett Foddy",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/240720/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/240720/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/240720",
       playtime_forever: 270,
       playtime_2weeks: null,
@@ -1484,7 +1512,7 @@ const SITE_DATA = {
       title_fr: "We Were Here Together",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/865360/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/865360/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/865360",
       playtime_forever: 270,
       playtime_2weeks: null,
@@ -1501,7 +1529,7 @@ const SITE_DATA = {
       title_fr: "The Outlast Trials",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1304930/b511ed32e00d90a15e6d1bf7861fe88f0cdde5db/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1304930/b511ed32e00d90a15e6d1bf7861fe88f0cdde5db/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1304930",
       playtime_forever: 252,
       playtime_2weeks: null,
@@ -1518,7 +1546,7 @@ const SITE_DATA = {
       title_fr: "Among Us",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/945360/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/945360/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/945360",
       playtime_forever: 246,
       playtime_2weeks: null,
@@ -1535,7 +1563,7 @@ const SITE_DATA = {
       title_fr: "MicroWorks",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1233410/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1233410/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1233410",
       playtime_forever: 240,
       playtime_2weeks: null,
@@ -1548,11 +1576,28 @@ const SITE_DATA = {
       achievements_percentage: 16.33,
     },
     {
+      app_id: 1636440,
+      title_fr: "SILENT HILL: Townfall",
+      release_year: null,
+      cover_url:
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1636440/cdad5ea5a7f19f1394a6393416c83720664ecf81/library_capsule.jpg",
+      store_url: "https://store.steampowered.com/app/1636440",
+      playtime_forever: 204,
+      playtime_2weeks: null,
+      achievements_unlocked: 1,
+      achievements_total: 36,
+      playtime_forever_hours: 3,
+      playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
+      playtime_2weeks_hours: null,
+      playtime_2weeks_source: null,
+      achievements_percentage: 2.78,
+    },
+    {
       app_id: 381210,
       title_fr: "Dead by Daylight",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/381210/1b6ff94b7c05c205fbcbd2628f862a1469882f23/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/381210/1b6ff94b7c05c205fbcbd2628f862a1469882f23/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/381210",
       playtime_forever: 198,
       playtime_2weeks: null,
@@ -1569,7 +1614,7 @@ const SITE_DATA = {
       title_fr: "Left 4 Dead 2",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/550/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/550/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/550",
       playtime_forever: 156,
       playtime_2weeks: null,
@@ -1586,7 +1631,7 @@ const SITE_DATA = {
       title_fr: "At Dead Of Night",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1450830/ffb06045dd3f2571ce6a7f6f2a6a8729ee140d8e/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1450830/ffb06045dd3f2571ce6a7f6f2a6a8729ee140d8e/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1450830",
       playtime_forever: 156,
       playtime_2weeks: null,
@@ -1603,7 +1648,7 @@ const SITE_DATA = {
       title_fr: "Warhammer 40,000: Dawn of War - Soulstorm",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/9450/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/9450/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/9450",
       playtime_forever: 144,
       playtime_2weeks: null,
@@ -1620,7 +1665,7 @@ const SITE_DATA = {
       title_fr: "Call of Duty: Black Ops II - Zombies",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/212910/portrait.png",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/212910/portrait.png",
       store_url: "https://store.steampowered.com/app/212910",
       playtime_forever: 138,
       playtime_2weeks: null,
@@ -1637,7 +1682,7 @@ const SITE_DATA = {
       title_fr: "Realm Royale Reforged",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/813820/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/813820/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/813820",
       playtime_forever: 132,
       playtime_2weeks: null,
@@ -1654,7 +1699,7 @@ const SITE_DATA = {
       title_fr: "Rise of the Tomb Raider",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/391220/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/391220/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/391220",
       playtime_forever: 120,
       playtime_2weeks: null,
@@ -1671,7 +1716,7 @@ const SITE_DATA = {
       title_fr: "Ghost Watchers",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1850740/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1850740/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1850740",
       playtime_forever: 120,
       playtime_2weeks: null,
@@ -1688,14 +1733,14 @@ const SITE_DATA = {
       title_fr: "Mimic Party",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/5053820/252c2f31357ce6aa2d7afcfd793e55776211e765/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/5053820/252c2f31357ce6aa2d7afcfd793e55776211e765/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/5053820",
       playtime_forever: 107,
       playtime_2weeks: null,
       achievements_unlocked: null,
       achievements_total: null,
       playtime_forever_hours: 1,
-      playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
+      playtime_forever_source: "spicy_FR_steam_Jeux.html",
       playtime_2weeks_hours: null,
       playtime_2weeks_source: null,
       achievements_percentage: null,
@@ -1705,7 +1750,7 @@ const SITE_DATA = {
       title_fr: "Bigscreen Beta",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/457550/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/457550/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/457550",
       playtime_forever: 104,
       playtime_2weeks: null,
@@ -1722,7 +1767,7 @@ const SITE_DATA = {
       title_fr: "Aimlabs",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/714010/925cad78049d4919f26edeefdedb83a4c6adfe97/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/714010/925cad78049d4919f26edeefdedb83a4c6adfe97/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/714010",
       playtime_forever: 95,
       playtime_2weeks: null,
@@ -1739,14 +1784,14 @@ const SITE_DATA = {
       title_fr: "BOMBANANA!",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/4656000/feaeb8f6d4b829252a902f0acd2d8fd385271871/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/4656000/feaeb8f6d4b829252a902f0acd2d8fd385271871/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/4656000",
       playtime_forever: 93,
       playtime_2weeks: null,
       achievements_unlocked: 5,
       achievements_total: 26,
       playtime_forever_hours: 1,
-      playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
+      playtime_forever_source: "spicy_FR_steam_Jeux.html",
       playtime_2weeks_hours: null,
       playtime_2weeks_source: null,
       achievements_percentage: 19.23,
@@ -1756,7 +1801,7 @@ const SITE_DATA = {
       title_fr: "Quake Champions",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/611500/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/611500/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/611500",
       playtime_forever: 92,
       playtime_2weeks: null,
@@ -1773,7 +1818,7 @@ const SITE_DATA = {
       title_fr: "Hunted: The Demon's Forge",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/22450/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/22450/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/22450",
       playtime_forever: 87,
       playtime_2weeks: null,
@@ -1790,7 +1835,7 @@ const SITE_DATA = {
       title_fr: "Totally Accurate Battlegrounds",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/823130/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/823130/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/823130",
       playtime_forever: 61,
       playtime_2weeks: null,
@@ -1807,7 +1852,7 @@ const SITE_DATA = {
       title_fr: "Last Man Standing",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/506540/portrait.png",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/506540/portrait.png",
       store_url: "https://store.steampowered.com/app/506540",
       playtime_forever: 56,
       playtime_2weeks: null,
@@ -1824,7 +1869,7 @@ const SITE_DATA = {
       title_fr: "Call of Duty: Black Ops II - Multiplayer",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/202990/portrait.png",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/202990/portrait.png",
       store_url: "https://store.steampowered.com/app/202990",
       playtime_forever: 55,
       playtime_2weeks: null,
@@ -1841,7 +1886,7 @@ const SITE_DATA = {
       title_fr: "ARK: Survival Evolved",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/346110/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/346110/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/346110",
       playtime_forever: 55,
       playtime_2weeks: null,
@@ -1858,7 +1903,7 @@ const SITE_DATA = {
       title_fr: "Celeste",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/504230/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/504230/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/504230",
       playtime_forever: 51,
       playtime_2weeks: null,
@@ -1875,7 +1920,7 @@ const SITE_DATA = {
       title_fr: "Arena Breakout: Infinite",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2073620/fbb037e7e1756848d5f304379df60cc432dc19f6/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2073620/fbb037e7e1756848d5f304379df60cc432dc19f6/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2073620",
       playtime_forever: 42,
       playtime_2weeks: null,
@@ -1892,7 +1937,7 @@ const SITE_DATA = {
       title_fr: "Old School RuneScape",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1343370/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1343370/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1343370",
       playtime_forever: 36,
       playtime_2weeks: null,
@@ -1909,7 +1954,7 @@ const SITE_DATA = {
       title_fr: "Forefront",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2981220/18bbe65571e01370fddd70998e9dbb9553b4be1b/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2981220/18bbe65571e01370fddd70998e9dbb9553b4be1b/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2981220",
       playtime_forever: 34,
       playtime_2weeks: null,
@@ -1926,7 +1971,7 @@ const SITE_DATA = {
       title_fr: "Vindictus",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/212160/ca2349acfa1dd8d4a466695371d368f312bc4b4d/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/212160/ca2349acfa1dd8d4a466695371d368f312bc4b4d/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/212160",
       playtime_forever: 25,
       playtime_2weeks: null,
@@ -1943,7 +1988,7 @@ const SITE_DATA = {
       title_fr: "Detroit: Become Human",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1222140/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1222140/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1222140",
       playtime_forever: 25,
       playtime_2weeks: null,
@@ -1960,7 +2005,7 @@ const SITE_DATA = {
       title_fr: "MARVEL SNAP",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1997040/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1997040/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1997040",
       playtime_forever: 25,
       playtime_2weeks: null,
@@ -1977,7 +2022,7 @@ const SITE_DATA = {
       title_fr: "skate.",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3354750/8dd654efd195e289b91d1d3afe1cbb24123fe6b5/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3354750/8dd654efd195e289b91d1d3afe1cbb24123fe6b5/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3354750",
       playtime_forever: 25,
       playtime_2weeks: null,
@@ -1994,7 +2039,7 @@ const SITE_DATA = {
       title_fr: "Aniimo",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/4126040/093428100a3d889c1abf7f85a74a1ab1d86965cd/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/4126040/093428100a3d889c1abf7f85a74a1ab1d86965cd/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/4126040",
       playtime_forever: 24,
       playtime_2weeks: null,
@@ -2011,7 +2056,7 @@ const SITE_DATA = {
       title_fr: "Don't Starve",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/219740/acc82e10cbc30c9a9862036d43ce02346a1d1dbf/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/219740/acc82e10cbc30c9a9862036d43ce02346a1d1dbf/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/219740",
       playtime_forever: 23,
       playtime_2weeks: null,
@@ -2028,7 +2073,7 @@ const SITE_DATA = {
       title_fr: "Wreckfest",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/228380/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/228380/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/228380",
       playtime_forever: 22,
       playtime_2weeks: null,
@@ -2045,7 +2090,7 @@ const SITE_DATA = {
       title_fr: "CRSED: Cuisine Royale",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/884660/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/884660/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/884660",
       playtime_forever: 22,
       playtime_2weeks: null,
@@ -2062,7 +2107,7 @@ const SITE_DATA = {
       title_fr: "World of Tanks: HEAT",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2100280/252864dcd29b686a2895a3e47af4d43571eba088/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2100280/252864dcd29b686a2895a3e47af4d43571eba088/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2100280",
       playtime_forever: 18,
       playtime_2weeks: null,
@@ -2079,7 +2124,7 @@ const SITE_DATA = {
       title_fr: "GOALS",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2753000/b8936056e417889a31bef7ca7f1c7c6b7df64015/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2753000/b8936056e417889a31bef7ca7f1c7c6b7df64015/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2753000",
       playtime_forever: 18,
       playtime_2weeks: null,
@@ -2096,7 +2141,7 @@ const SITE_DATA = {
       title_fr: "AION 2",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3393110/145d58f9f8ffa48e6333b1dc3dd2ad7e9bf2b2b4/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3393110/145d58f9f8ffa48e6333b1dc3dd2ad7e9bf2b2b4/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3393110",
       playtime_forever: 18,
       playtime_2weeks: null,
@@ -2113,7 +2158,7 @@ const SITE_DATA = {
       title_fr: "Marvel Rivals",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2767030/846b1e4bc5e334b691bbe0b19fbbb6b074d5d89f/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2767030/cd27144f2f595b564be1a71863a51a603504e1ef/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2767030",
       playtime_forever: 17,
       playtime_2weeks: null,
@@ -2130,7 +2175,7 @@ const SITE_DATA = {
       title_fr: "Torchlight: Infinite",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1974050/72eb7825e1a0021cdb0df5ee625260c2f1e80d83/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1974050/72eb7825e1a0021cdb0df5ee625260c2f1e80d83/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1974050",
       playtime_forever: 16,
       playtime_2weeks: null,
@@ -2147,7 +2192,7 @@ const SITE_DATA = {
       title_fr: "Grounded 2",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2661300/64f074d18d8f7f0a9a48b7cffb7967193c5ad389/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2661300/64f074d18d8f7f0a9a48b7cffb7967193c5ad389/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2661300",
       playtime_forever: 16,
       playtime_2weeks: null,
@@ -2164,7 +2209,7 @@ const SITE_DATA = {
       title_fr: "Duet Night Abyss",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3950020/0c19ce9b923d8f7ba1f49bbb57fa43dba56366a8/library_capsule_french.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3950020/0c19ce9b923d8f7ba1f49bbb57fa43dba56366a8/library_capsule_french.jpg",
       store_url: "https://store.steampowered.com/app/3950020",
       playtime_forever: 16,
       playtime_2weeks: null,
@@ -2181,7 +2226,7 @@ const SITE_DATA = {
       title_fr: "Nekome: Nazi Hunter Demo",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/4859720/2ed4a2c3dfd90fe71ad85a21f8addc3e0daaf827/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/4859720/2ed4a2c3dfd90fe71ad85a21f8addc3e0daaf827/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/4859720",
       playtime_forever: 16,
       playtime_2weeks: null,
@@ -2198,7 +2243,7 @@ const SITE_DATA = {
       title_fr: "Summoners War: Sky Arena",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2426960/61703a2490537a4bf1155aefae7add67f560c14d/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2426960/61703a2490537a4bf1155aefae7add67f560c14d/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2426960",
       playtime_forever: 15,
       playtime_2weeks: null,
@@ -2211,28 +2256,11 @@ const SITE_DATA = {
       achievements_percentage: null,
     },
     {
-      app_id: 4541470,
-      title_fr: "Deadzone Rogue 2 Demo",
-      release_year: null,
-      cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/4541470/5c1bec3983ea45f96ce9b9e83ef3ef6b225edb21/library_capsule.jpg",
-      store_url: "https://store.steampowered.com/app/4541470",
-      playtime_forever: 15,
-      playtime_2weeks: null,
-      achievements_unlocked: null,
-      achievements_total: null,
-      playtime_forever_hours: 0,
-      playtime_forever_source: "spicy_FR_steam_Jeux_recent.html",
-      playtime_2weeks_hours: null,
-      playtime_2weeks_source: null,
-      achievements_percentage: null,
-    },
-    {
       app_id: 755790,
       title_fr: "Ring of Elysium",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/755790/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/755790/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/755790",
       playtime_forever: 11,
       playtime_2weeks: null,
@@ -2249,7 +2277,7 @@ const SITE_DATA = {
       title_fr: "Shakes and Fidget",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/438040/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/438040/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/438040",
       playtime_forever: 9,
       playtime_2weeks: null,
@@ -2266,7 +2294,7 @@ const SITE_DATA = {
       title_fr: "Dragonheir: Silent Gods",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2203070/4b04ae41791bead1f752f0ebb7f8b97042346ef6/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2203070/4b04ae41791bead1f752f0ebb7f8b97042346ef6/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2203070",
       playtime_forever: 4,
       playtime_2weeks: null,
@@ -2283,7 +2311,7 @@ const SITE_DATA = {
       title_fr: "Dragon's Dogma 2 Création et stockage de personnages",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2674810/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2674810/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2674810",
       playtime_forever: 3,
       playtime_2weeks: null,
@@ -2316,7 +2344,7 @@ const SITE_DATA = {
       title_fr: "Shonen Idle Z",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/492800/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/492800/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/492800",
       playtime_forever: 2,
       playtime_2weeks: null,
@@ -2333,7 +2361,7 @@ const SITE_DATA = {
       title_fr: "Counter-Strike",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/10/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/10/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/10",
       playtime_forever: 1,
       playtime_2weeks: null,
@@ -2350,7 +2378,7 @@ const SITE_DATA = {
       title_fr: "Fallout",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/38400/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/38400/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/38400",
       playtime_forever: 1,
       playtime_2weeks: null,
@@ -2367,7 +2395,7 @@ const SITE_DATA = {
       title_fr: "VRChat",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/438100/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/438100/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/438100",
       playtime_forever: 1,
       playtime_2weeks: null,
@@ -2384,7 +2412,7 @@ const SITE_DATA = {
       title_fr: "Team Fortress Classic",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/20/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/20/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/20",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2401,7 +2429,7 @@ const SITE_DATA = {
       title_fr: "Day of Defeat",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/30/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/30/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/30",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2418,7 +2446,7 @@ const SITE_DATA = {
       title_fr: "Deathmatch Classic",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/40/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/40/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/40",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2435,7 +2463,7 @@ const SITE_DATA = {
       title_fr: "Half-Life: Opposing Force",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/50/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/50/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/50",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2452,7 +2480,7 @@ const SITE_DATA = {
       title_fr: "Ricochet",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/60/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/60/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/60",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2469,7 +2497,7 @@ const SITE_DATA = {
       title_fr: "Half-Life",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/70/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/70/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/70",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2486,7 +2514,7 @@ const SITE_DATA = {
       title_fr: "Counter-Strike: Condition Zero",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/80/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/80/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/80",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2503,7 +2531,7 @@ const SITE_DATA = {
       title_fr: "Counter-Strike: Condition Zero Deleted Scenes",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/100/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/100/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/100",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2520,7 +2548,7 @@ const SITE_DATA = {
       title_fr: "Half-Life: Blue Shift",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/130/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/130/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/130",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2537,7 +2565,7 @@ const SITE_DATA = {
       title_fr: "Half-Life 2",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/220/ac2f074d790656a06ef8305bd54a6f64e9a70082/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/220/ac2f074d790656a06ef8305bd54a6f64e9a70082/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/220",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2554,7 +2582,7 @@ const SITE_DATA = {
       title_fr: "Counter-Strike: Source",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/240/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/240/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/240",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2571,7 +2599,7 @@ const SITE_DATA = {
       title_fr: "Half-Life: Source",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/280/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/280/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/280",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2588,7 +2616,7 @@ const SITE_DATA = {
       title_fr: "Day of Defeat: Source",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/300/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/300/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/300",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2605,7 +2633,7 @@ const SITE_DATA = {
       title_fr: "Half-Life 2: Deathmatch",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/320/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/320/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/320",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2622,7 +2650,7 @@ const SITE_DATA = {
       title_fr: "Half-Life Deathmatch: Source",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/360/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/360/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/360",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2639,7 +2667,7 @@ const SITE_DATA = {
       title_fr: "Portal",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/400/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/400/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/400",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2656,7 +2684,7 @@ const SITE_DATA = {
       title_fr: "Left 4 Dead",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/500/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/500/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/500",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2673,7 +2701,7 @@ const SITE_DATA = {
       title_fr: "Portal 2",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/620/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/620/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/620",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2690,7 +2718,7 @@ const SITE_DATA = {
       title_fr: "Warhammer 40,000: Dawn of War - Édition Anniversaire",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/4570/5d1aad23889b96d2ebee94cf8bdd4a8da52a10ef/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/4570/5d1aad23889b96d2ebee94cf8bdd4a8da52a10ef/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/4570",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2707,7 +2735,7 @@ const SITE_DATA = {
       title_fr: "Warhammer 40,000: Dawn of War - Dark Crusade",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/4580/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/4580/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/4580",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2724,7 +2752,7 @@ const SITE_DATA = {
       title_fr: "Warhammer 40,000: Dawn of War - Winter Assault",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/9310/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/9310/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/9310",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2741,7 +2769,7 @@ const SITE_DATA = {
       title_fr: "Call of Duty: Modern Warfare 2 (2009)",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/10180/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/10180/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/10180",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2758,7 +2786,7 @@ const SITE_DATA = {
       title_fr: "Call of Duty: Modern Warfare 2 (2009) - Multiplayer",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/10190/portrait.png",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/10190/portrait.png",
       store_url: "https://store.steampowered.com/app/10190",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2775,7 +2803,7 @@ const SITE_DATA = {
       title_fr: "Resident Evil 5",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/21690/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/21690/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/21690",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2792,7 +2820,7 @@ const SITE_DATA = {
       title_fr: "Call of Duty®: Modern Warfare® 3 (2011)",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/42680/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/42680/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/42680",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2825,7 +2853,7 @@ const SITE_DATA = {
       title_fr: "Warhammer 40,000: Space Marine - Anniversary Edition",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/55150/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/55150/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/55150",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2842,7 +2870,7 @@ const SITE_DATA = {
       title_fr: "Call of Duty: Black Ops II",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/202970/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/202970/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/202970",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2859,7 +2887,7 @@ const SITE_DATA = {
       title_fr: "TERA",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/212740/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/212740/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/212740",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2892,7 +2920,7 @@ const SITE_DATA = {
       title_fr: "Warframe",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/230410/0572533cfd26a64e831f83ef3f940e1b8012b1e8/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/230410/0572533cfd26a64e831f83ef3f940e1b8012b1e8/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/230410",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2909,7 +2937,7 @@ const SITE_DATA = {
       title_fr: "Shadowrun Returns",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/234650/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/234650/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/234650",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2926,7 +2954,7 @@ const SITE_DATA = {
       title_fr: "War Thunder",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/236390/c6d3692cc1ca507f0d02ca7f243d450393facfed/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/236390/7dd482035ef502666b0ab1caa0e99c2a2609d957/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/236390",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2943,7 +2971,7 @@ const SITE_DATA = {
       title_fr: "Wreckfest Throw-A-Santa + Sneak Peek 2.0",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/272860/portrait.png",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/272860/portrait.png",
       store_url: "https://store.steampowered.com/app/272860",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2960,7 +2988,7 @@ const SITE_DATA = {
       title_fr: "FINAL FANTASY X/X-2 HD Remaster",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/359870/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/359870/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/359870",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2977,7 +3005,7 @@ const SITE_DATA = {
       title_fr: "SMITE",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/386360/79115b45914d6a9dad3a21d7150aed56f3318b59/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/386360/79115b45914d6a9dad3a21d7150aed56f3318b59/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/386360",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -2994,7 +3022,7 @@ const SITE_DATA = {
       title_fr: "ARK: Survival Of The Fittest",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/407530/portrait.png",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/407530/portrait.png",
       store_url: "https://store.steampowered.com/app/407530",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3011,7 +3039,7 @@ const SITE_DATA = {
       title_fr: "H1Z1: Test Server",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/439700/portrait.png",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/439700/portrait.png",
       store_url: "https://store.steampowered.com/app/439700",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3028,7 +3056,7 @@ const SITE_DATA = {
       title_fr: "Paladins",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/444090/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/444090/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/444090",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3045,7 +3073,7 @@ const SITE_DATA = {
       title_fr: "Deceit",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/466240/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/466240/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/466240",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3062,7 +3090,7 @@ const SITE_DATA = {
       title_fr: "The Elder Scrolls V: Skyrim Special Edition",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/489830/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/489830/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/489830",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3095,7 +3123,7 @@ const SITE_DATA = {
       title_fr: "TUNIC",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/553420/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/553420/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/553420",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3112,7 +3140,7 @@ const SITE_DATA = {
       title_fr: "Golf It!",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/571740/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/571740/cc81d25f23128c71c315b5f066739aa53bf1619d/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/571740",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3161,7 +3189,7 @@ const SITE_DATA = {
       title_fr: "Bit Heroes",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/666860/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/666860/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/666860",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3178,7 +3206,7 @@ const SITE_DATA = {
       title_fr: "DiRT Rally 2.0",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/690790/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/690790/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/690790",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3195,7 +3223,7 @@ const SITE_DATA = {
       title_fr: "SCP: Secret Laboratory",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/700330/4e90d99087935bd4b60de06e67f6c7bfe016d414/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/700330/4e90d99087935bd4b60de06e67f6c7bfe016d414/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/700330",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3212,7 +3240,7 @@ const SITE_DATA = {
       title_fr: "A Plague Tale: Innocence",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/752590/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/752590/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/752590",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3229,7 +3257,7 @@ const SITE_DATA = {
       title_fr: "Aimtastic",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/757240/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/757240/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/757240",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3246,7 +3274,7 @@ const SITE_DATA = {
       title_fr: "Shield Impact",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/771680/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/771680/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/771680",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3263,7 +3291,7 @@ const SITE_DATA = {
       title_fr: "Friday the 13th: Killer Puzzle",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/795100/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/795100/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/795100",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3312,7 +3340,7 @@ const SITE_DATA = {
       title_fr: "RESIDENT EVIL RESISTANCE",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/952070/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/952070/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/952070",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3329,7 +3357,7 @@ const SITE_DATA = {
       title_fr: "Kebab Chefs! - Restaurant Simulator",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1001270/0b05b3c5a9c9279dd5e48e773fd4bf127aab2748/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1001270/0b05b3c5a9c9279dd5e48e773fd4bf127aab2748/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1001270",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3346,7 +3374,7 @@ const SITE_DATA = {
       title_fr: "Ranch Simulator",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1119730/71789024133779961e986459bf155344e46956cd/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1119730/71789024133779961e986459bf155344e46956cd/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1119730",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3363,7 +3391,7 @@ const SITE_DATA = {
       title_fr: "Horizon Zero Dawn™ Complete Edition",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1151640/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1151640/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1151640",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3380,7 +3408,7 @@ const SITE_DATA = {
       title_fr: "A Plague Tale: Requiem",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1182900/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1182900/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1182900",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3397,7 +3425,7 @@ const SITE_DATA = {
       title_fr: "Resident Evil Re:Verse",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1236300/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1236300/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1236300",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3414,7 +3442,7 @@ const SITE_DATA = {
       title_fr: "ELDEN RING",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1245620/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1245620/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1245620",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3431,7 +3459,7 @@ const SITE_DATA = {
       title_fr: "Lords of the Fallen",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1501750/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1501750/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1501750",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3464,7 +3492,7 @@ const SITE_DATA = {
       title_fr: "Switchball HD",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1588760/378e28c744d4b4ef064f689f1d618f3aa712b4ac/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1588760/378e28c744d4b4ef064f689f1d618f3aa712b4ac/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1588760",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3481,7 +3509,7 @@ const SITE_DATA = {
       title_fr: "The Dark Pictures Anthology: House of Ashes - Friend's Pass",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1775270/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1775270/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/1775270",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3498,7 +3526,7 @@ const SITE_DATA = {
       title_fr: "Breachers",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/1922010/a32d056cc74707a1e5ded06254b12dc9cac63bc7/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/1922010/a32d056cc74707a1e5ded06254b12dc9cac63bc7/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/1922010",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3515,7 +3543,7 @@ const SITE_DATA = {
       title_fr: "THE FINALS",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2073850/bde08dae07fcb40376bd6c8bf8c17887e91f0072/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2073850/bde08dae07fcb40376bd6c8bf8c17887e91f0072/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2073850",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3532,7 +3560,7 @@ const SITE_DATA = {
       title_fr: "Immortals Fenyx Rising",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2221920/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2221920/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2221920",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3549,7 +3577,7 @@ const SITE_DATA = {
       title_fr: "Trackmania",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2225070/bfb6b39485e44f9a7a7628c03f65ffd588076630/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2225070/bfb6b39485e44f9a7a7628c03f65ffd588076630/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2225070",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3566,7 +3594,7 @@ const SITE_DATA = {
       title_fr: "Monster Hunter Wilds",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2246340/e3fc16c6bc498891e952500eda05fe6462ceb9f0/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2246340/e3fc16c6bc498891e952500eda05fe6462ceb9f0/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2246340",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3583,7 +3611,7 @@ const SITE_DATA = {
       title_fr: "MAD WAY",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2289400/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2289400/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2289400",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3600,7 +3628,7 @@ const SITE_DATA = {
       title_fr: "Horizon Forbidden West™ Complete Edition",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2420110/library_600x900.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2420110/library_600x900.jpg",
       store_url: "https://store.steampowered.com/app/2420110",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3617,7 +3645,7 @@ const SITE_DATA = {
       title_fr: "Path of Exile 2",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2694490/c7c5fdc822e3dcb4cc39faf79d90d2d7d9a8834e/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2694490/c7c5fdc822e3dcb4cc39faf79d90d2d7d9a8834e/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2694490",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3634,7 +3662,7 @@ const SITE_DATA = {
       title_fr: "Fable",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2769570/2ec61bc4af6cbd99d7a25ad392e66f17bb6cb0fb/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2769570/2ec61bc4af6cbd99d7a25ad392e66f17bb6cb0fb/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2769570",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3651,7 +3679,7 @@ const SITE_DATA = {
       title_fr: "Escape Simulator 2",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2879840/aaa620f21dbb40a02a0374777b0d8afe7a248a80/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2879840/aaa620f21dbb40a02a0374777b0d8afe7a248a80/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2879840",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3668,7 +3696,7 @@ const SITE_DATA = {
       title_fr: "FragPunk",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/2943650/5b87f3ef2293a509622b575771d48be4b105ede1/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/2943650/5b87f3ef2293a509622b575771d48be4b105ede1/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/2943650",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3685,7 +3713,7 @@ const SITE_DATA = {
       title_fr: "TCG Card Shop Simulator",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3070070/0241d5b41a17ede02c1bc07ef324c6cee5f5b283/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3070070/0241d5b41a17ede02c1bc07ef324c6cee5f5b283/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3070070",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3702,7 +3730,7 @@ const SITE_DATA = {
       title_fr: "Assassin's Creed Shadows",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3159330/bdab6ed673aea5877d76e8c99c696ced92cf0d12/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3159330/bdab6ed673aea5877d76e8c99c696ced92cf0d12/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3159330",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3719,7 +3747,7 @@ const SITE_DATA = {
       title_fr: "Tomb Raider: Legacy of Atlantis",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3558670/9da365c6dd7f21eff671a6c6854a680a6ac63f11/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3558670/9da365c6dd7f21eff671a6c6854a680a6ac63f11/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3558670",
       playtime_forever: null,
       playtime_2weeks: null,
@@ -3736,7 +3764,7 @@ const SITE_DATA = {
       title_fr: "RV There Yet?",
       release_year: null,
       cover_url:
-        "https://shared.akamai.steamstatic.com/store_item_assets//steam/apps/3949040/701632e4a84f8378c23fdf18ae127cb6a0f3f904/library_capsule.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets//steam/apps/3949040/701632e4a84f8378c23fdf18ae127cb6a0f3f904/library_capsule.jpg",
       store_url: "https://store.steampowered.com/app/3949040",
       playtime_forever: null,
       playtime_2weeks: null,
